@@ -15,12 +15,12 @@ export const loginAjax = user => (
 );
 
 export const logoutAjax = () => (
-  $.ajx({
+  $.ajax({
     method: "DELETE",
     url: "/api/session"
   })
 );
 
-window.signupAjax = signupAjax;
-window.loginAjax = loginAjax;
-window.logoutAjax = logoutAjax;
+// window.signupAjax = signupAjax;
+// window.loginAjax = loginAjax;
+// window.logoutAjax = logoutAjax;

@@ -96,7 +96,7 @@ class Signup extends React.Component {
             value={this.state.primary_location}
             onChange={this.handleInput('primary_location')}
             />
-            <button className="signup-button" onClick={this.props.removeErrors()}>Create Account</button>
+            <button className="signup-button" onClick={() => this.props.removeErrors()}>Create Account</button>
             <p>Don't want to complete the form?</p>
             <div className="facebook-google-button-div">
               <a href="https://www.facebook.com/" className="facebook-google-btn"><i className="fab fa-facebook-f"></i>Continue with Facebook</a>
