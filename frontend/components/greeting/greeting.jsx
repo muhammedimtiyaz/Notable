@@ -18,7 +18,7 @@ const Greeting = ({ currentUser, logout }) => {
         <span className="dropdown-icon"><i class="fas fa-chevron-circle-down"></i></span>
       </a>
 
-      <div class="dropdown-menu-items" aria-labelledby="dropdownMenuLink">
+      <div className="dropdown-menu-items" aria-labelledby="dropdownMenuLink">
         <Link to="/Profile">My Profile</Link>
         <Link to="/Favorites">My Favorite Restaurants</Link>
         <Link to="/" onClick={() => logout()}>Sign Out</Link>

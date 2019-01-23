@@ -9,7 +9,12 @@ class LoginForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
+
+  // componentDidUpdate() {
+  //   this.renderErrors();
+  // }
 
   // componentWillUnmount() {
   //   removeErrors(this.props.errors);
@@ -27,6 +32,7 @@ class LoginForm extends React.Component {
   }
 
   renderErrors() {
+    // debugger
     return(
       <ul>
         {this.props.errors.map((error, i) => (
@@ -43,36 +49,43 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="login-form">
-        <h2>Please sign in</h2>
-        <br/>
-        {this.renderErrors()}
-        <form onSubmit={this.handleSubmit}>
-          <input 
-            type="text"
-            placeholder="Email"
-            onChange={this.update("email")}
-            value={this.state.email}/>
-          <input 
-            type="password"
-            placeholder="Password"
-            onChange={this.update("password")}
-            value={this.state.password}/>
-          <button className="login-button" onClick={() => this.props.removeErrors()}>Sign In</button>
-          <p>Don't want to complete the form?</p>
-          <div className="facebook-google-button-div">
-            <a href="https://www.facebook.com/" className="facebook-google-btn"><i className="fab fa-facebook-f"></i>Continue with Facebook</a>
-          </div>
-          <div className="facebook-google-button-div">
-            <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F%3Fgws_rd%3Dssl&flowName=GlifWebSignIn&flowEntry=ServiceLogin" className="facebook-google-connect-button"><i className="fab fa-google"></i>Continue with Google</a>
-          </div>
-          <div>
-            <span>New To OpenTable?</span>
-            {this.props.navLink}
-          </div>
-        </form>
-      </div>
+<h2>Please sign in</h2>
+<br/>
+{this.renderErrors()}
+<form onSubmit={this.handleSubmit}>
+  <input 
+    type="text"
+    placeholder="Email"
+    onChange={this.update("email")}
+    value={this.state.email}/>
+  <input 
+    type="password"
+    placeholder="Password"
+    onChange={this.update("password")}
+    value={this.state.password}/>
+  <button className="login-button" onClick={() => this.props.removeErrors()}>Sign In</button>
+  <p>Don't want to complete the form?</p>
+  <div className="facebook-google-button-div">
+    <a href="https://www.facebook.com/" className="facebook-google-btn"><i className="fab fa-facebook-f"></i>Continue with Facebook</a>
+  </div>
+  <div className="facebook-google-button-div">
+    <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F%3Fgws_rd%3Dssl&flowName=GlifWebSignIn&flowEntry=ServiceLogin" className="facebook-google-connect-button"><i className="fab fa-google"></i>Continue with Google</a>
+  </div>
+  <div>
+    <span>New To OpenTable?</span>
+    {this.props.navLink}
+  </div>
+</form>
+</div>
     )
   }
 }
 
 export default LoginForm;
+
+
+
+
+<div className="modal">
+        <div className="modal-"></div>
+      </div>
