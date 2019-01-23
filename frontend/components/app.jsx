@@ -15,9 +15,11 @@ import LogInFormContainer from './session/login_form_container';
 // import BenchShowContainer from './bench_show/bench_show_container';
 // import BenchFormContainer from './bench_form/bench_form_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
+import Modal from "./modal";
 
 const App = () => (
   <div>
+    <Modal />
     <header>
       <Link to="/" className="header-link">
         <h1>Notable</h1>
@@ -25,10 +27,11 @@ const App = () => (
       <GreetingContainer />
     </header>
     <Switch>
-      <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
     </Switch>
   </div>
 );
 
 export default App;
+
+/* <AuthRoute exact path="/login" component={LogInFormContainer} />
+<AuthRoute exact path="/signup" component={SignUpFormContainer} /> */

@@ -23,9 +23,10 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createNewUser(this.state).then( () => this.props.history.push("/"));
+    this.props.createNewUser(this.state).then(this.props.closeModal);
   }
 
+  // () => this.props.history.push("/")
 
   renderErrors() {
     return(
@@ -44,6 +45,7 @@ class Signup extends React.Component {
     return (
       <div className="signup-form">
         <h2>Welcome to OpenTable!</h2>
+        <span className="close" onClick={this.props.closeModal}>&times;</span>
         <br/>
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
