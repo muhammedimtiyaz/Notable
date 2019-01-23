@@ -53,8 +53,8 @@ class LoginForm extends React.Component {
     return (
       <div id="modal-login" className="modal">
         <div className="modal-login-form">
-          <h2>Please sign in</h2>
           <span className="close" onClick={this.props.closeModal}>&times;</span>
+          <h2>Please sign in</h2>
           <br/>
           {this.renderErrors()}
           <form onSubmit={this.handleSubmit}>
@@ -63,7 +63,7 @@ class LoginForm extends React.Component {
               placeholder="Email"
               onChange={this.update("email")}
               value={this.state.email}
-              autofocus/>
+              autoFocus/>
             <input 
               type="password"
               placeholder="Password"
