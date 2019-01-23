@@ -1,8 +1,8 @@
 class Api::SessionsController < ApplicationController
   def create
     @user = User.find_by_creds(
-      user_params[:user][:username],
-      user_params[:user][:password]
+      user_params[:email],
+      user_params[:password]
     )
 
     if @user
@@ -26,6 +26,6 @@ class Api::SessionsController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:email, :password)
   end
 end

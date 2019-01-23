@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { createNewUser } from "../../actions/session_action";
+import { signup, removeErrors } from "../../actions/session_action";
 import { Link } from 'react-router-dom';
 import Signup from "./signup_form";
 
-const mapStateToProps = ({ errors }) => {
+const msp = ({ errors }) => {
   return {
     errors: errors.session,
     formType: 'signup',
@@ -12,8 +12,11 @@ const mapStateToProps = ({ errors }) => {
   };
 };
 
-const mdp = dispatch => ({
-  createNewUser: formUser => dispatch(createNewUser(formUser)),
-});
+const mdp = dispatch => {
+  return {
+    createNewUser: (formUser) => dispatch(signup(formUser)),
+    removeErrors: () => dispatch(removeErrors()),
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Signup);
+export default connect(msp, mdp)(Signup);
