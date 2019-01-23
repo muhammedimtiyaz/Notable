@@ -21,7 +21,7 @@ const Greeting = ({ currentUser, logout }) => {
       <div class="dropdown-menu-items" aria-labelledby="dropdownMenuLink">
         <Link to="/Profile">My Profile</Link>
         <Link to="/Favorites">My Favorite Restaurants</Link>
-        <Link to="/" onClick={logout}>Sign Out</Link>
+        <Link to="/" onClick={() => logout()}>Sign Out</Link>
       </div>
     </div>
   );
