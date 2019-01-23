@@ -17,12 +17,6 @@ class User < ApplicationRecord
     user && user.is_password?(password) ? user : nil
   end
 
-  def reset_token!
-    self.session_token = SecureRandom.urlsafe_base64
-    self.save!
-    self.session_token
-  end
-
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
@@ -32,9 +26,28 @@ class User < ApplicationRecord
     BCrypt::password.new(self.password_digest).is_password?(password)
   end
 
+  def reset_token!
+    generate_unique_session_token
+    save!
+    self.session_token
+  end
+
   private
 
   def ensure_session_token
-    self.session_token ||= SecureRandom.urlsafe_base64
+    generate_unique_session_token unless self.session_token
   end
+
+  def new_session_token
+    SecureRandom.urlsafe_base64
+  end
+
+  def generate_unique_session_token
+    self.session_token = new_session_token
+    while User.find_by(session_token: self.session_token)
+      self.session_token = new_session_token
+    end
+    self.session_token
+  end
+
 end
