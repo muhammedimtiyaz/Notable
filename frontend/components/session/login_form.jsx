@@ -12,12 +12,34 @@ class LoginForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  componentDidMount() {
-    document.body.style = "overflow: auto;";
+  demologin(e) {
+    e.preventDefault();
+    const email = 'demo'.split('');
+    const password = 'hunter12'.split('');
+    const submit = document.getElementById('login-button');
+    this.setState({ email: '', password: '' }, () =>
+      this.demoUserHelper(email, password, submit)
+    );
   }
 
-  componentWillUnmount() {
-    document.body.removeAttribute('style');
+  demoUserHelper(email, password, submit) {
+    if (email.length > 0) {
+      this.setState(
+        { email: this.state.email + email.shift() }, () => {
+          window.setTimeout(() =>
+            this.demoUserHelper(email, password, submit), 50);
+        }
+      );
+    } else if (password.length > 0) {
+      this.setState(
+        { password: this.state.password + password.shift() }, () => {
+          window.setTimeout(() =>
+            this.demoUserHelper(email, password, submit), 50);
+        }
+      );
+    } else {
+      submit.click();
+    }
   }
 
   handleSubmit(e) {
@@ -53,10 +75,8 @@ class LoginForm extends React.Component {
     return (
       <div id="modal-login" className="modal">
         <div className="modal-login-form">
-          <div className="header-wrapper">
-            <span className="close" onClick={this.props.closeModal}>&times;</span>
-            <h2 className="login-h2">Please sign in</h2>
-          </div>
+          <h2>Please sign in</h2>
+          <span className="close" onClick={this.props.closeModal}>&times;</span>
           <hr></hr>
           <br/>
           {this.renderErrors()}
@@ -69,19 +89,20 @@ class LoginForm extends React.Component {
               value={this.state.email}
               required/>
             <input 
-              className={`login-input ${this.state.password ? "" : "empty"}`}
+              className="login-input"
               type="password"
               placeholder="Password"
               onChange={this.update("password")}
               value={this.state.password}
               required/>
             <button id="login-button" className="login-button" onClick={() => this.props.removeErrors()}>Sign In</button>
+            <hr></hr>
             <p>Don't want to complete the form?</p>
             <div className="facebook-google-button-div">
               <a href="https://www.facebook.com/" className="facebook-google-btn"><i className="fab fa-facebook-f"></i>Continue with Facebook</a>
             </div>
             <div className="facebook-google-button-div">
-              <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F%3Fgws_rd%3Dssl&flowName=GlifWebSignIn&flowEntry=ServiceLogin" className="facebook-google-connect-button"><i className="fab fa-google"></i>Continue with Google</a>
+              <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F%3Fgws_rd%3Dssl&flowName=GlifWebSignIn&flowEntry=ServiceLogin" className="facebook-google-btn"><i className="fab fa-google"></i>Continue with Google</a>
             </div>
             <div>
               <span>New To OpenTable?</span>
@@ -89,7 +110,6 @@ class LoginForm extends React.Component {
             </div>
           </form>
         </div>
-        
       </div>
     )
   }

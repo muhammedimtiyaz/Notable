@@ -43,7 +43,8 @@ class Signup extends React.Component {
 
   render () {
     return (
-      <div className="signup-form">
+      <div id="signup" className="modal">
+        <div className="modal-signup-form">
         <h2>Welcome to OpenTable!</h2>
         <span className="close" onClick={this.props.closeModal}>&times;</span>
         <br/>
@@ -108,6 +109,7 @@ class Signup extends React.Component {
             </div>
         </form>
       </div>
+    </div>
     );
   }
 };
