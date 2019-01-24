@@ -53,22 +53,28 @@ class LoginForm extends React.Component {
     return (
       <div id="modal-login" className="modal">
         <div className="modal-login-form">
-          <span className="close" onClick={this.props.closeModal}>&times;</span>
-          <h2>Please sign in</h2>
+          <div className="header-wrapper">
+            <span className="close" onClick={this.props.closeModal}>&times;</span>
+            <h2 className="login-h2">Please sign in</h2>
+          </div>
+          <hr></hr>
           <br/>
           {this.renderErrors()}
           <form onSubmit={this.handleSubmit}>
             <input 
+              className="login-input"
               type="text"
               placeholder="Email"
               onChange={this.update("email")}
               value={this.state.email}
-              autoFocus/>
+              required/>
             <input 
+              className={`login-input ${this.state.password ? "" : "empty"}`}
               type="password"
               placeholder="Password"
               onChange={this.update("password")}
-              value={this.state.password}/>
+              value={this.state.password}
+              required/>
             <button id="login-button" className="login-button" onClick={() => this.props.removeErrors()}>Sign In</button>
             <p>Don't want to complete the form?</p>
             <div className="facebook-google-button-div">
