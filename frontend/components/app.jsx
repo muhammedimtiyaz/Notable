@@ -21,9 +21,6 @@ const App = () => (
   <div>
     <Modal />
     <header>
-      <Link to="/" className="header-link">
-        <h1>Notable</h1>
-      </Link>
       <GreetingContainer />
     </header>
     <Switch>

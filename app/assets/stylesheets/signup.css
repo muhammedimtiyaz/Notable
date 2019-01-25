@@ -39,7 +39,7 @@ hr {
 
 .close:hover,
 .close:focus {
-  color: #999;
+  color: rgb(70, 70, 70);
   text-decoration: none;
   cursor: pointer;
 }

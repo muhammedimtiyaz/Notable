@@ -1,0 +1,74 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid darkblue;
+}
+
+.left-nav,
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav {
+  margin-left: 15px;
+  /* position: relative; */
+  padding: 1px 1px;
+}
+
+.right-nav {
+  padding: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+.signup-btn {
+  padding: 7px 9px;
+  transition: background-color 0.3s;
+  background-color: darkblue;
+  border: 1px solid darkblue;
+  color: #fff;
+}
+
+.signup-btn:hover {
+  background-color: darkblue;
+}
+
+.login-btn,
+.signup-btn {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.login-btn {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.homepage-icon {
+  width: 90px;
+  height: 70px;;
+  /* size: 14px; */
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 9.75rem;
+  height: 3.375rem;
+  /* size: 14px; */
+}
+
+.logo-text {
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  /* padding-left: 5px; */
+  text-decoration: none;
+
+}
