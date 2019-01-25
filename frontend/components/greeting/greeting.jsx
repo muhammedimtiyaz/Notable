@@ -45,7 +45,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <div className="right-nav">
           <nav className="login-signup">
             <button className="signup-btn" onClick={ () => openModal('signup')}>Signup</button>
-            <button className="login-btn" onClick={ () => openModal('login')}>Login</button>
+            <button className="login-btn" onClick={ () => openModal('login')}>Sign in</button>
           </nav>
         </div>
       </div>
@@ -64,14 +64,17 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <div className="right-nav">
           <div className="dropdown-menu">
             <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <p className="greeting">Hi, {currentUser.username}</p>
-            <span className="dropdown-icon"><i className="fas fa-chevron-circle-down"></i></span>
+              <p className="greeting">Hi, {currentUser.username}</p>
+              <span className="dropdown-icon"><i className="fas fa-chevron-circle-down"></i></span>
             </a>
-
-            <div className="dropdown-menu-items" aria-labelledby="dropdownMenuLink">
-              <Link to="/Profile">My Profile</Link>
-              <Link to="/Favorites">My Favorite Restaurants</Link>
-              <Link to="/" onClick={() => logout()}>Sign Out</Link>
+            <div className="menu-container">
+              <div className="menu-section">
+                <div className="dropdown-menu-items" aria-labelledby="dropdownMenuLink">
+                  <Link to="/Profile">My Profile</Link>
+                  <Link to="/Favorites">My Favorite Restaurants</Link>
+                  <Link to="/" onClick={() => logout()}>Sign Out</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

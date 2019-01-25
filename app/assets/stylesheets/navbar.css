@@ -1,8 +1,17 @@
+.master-container {
+  background-color: rgb(247, 247, 247);
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid darkblue;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  width: 1600px;
+  height: auto;
+  margin: 0 auto;
+  background-color: white;
 }
 
 .left-nav,
@@ -13,7 +22,7 @@
 
 .left-nav {
   margin-left: 15px;
-  /* position: relative; */
+  position: relative;
   padding: 1px 1px;
 }
 
@@ -22,37 +31,46 @@
   margin-left: 20px;
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
-  font-size: 15px;
 }
 
 .signup-btn {
-  padding: 7px 9px;
+  padding: 0 1rem;
   transition: background-color 0.3s;
-  background-color: darkblue;
-  border: 1px solid darkblue;
+  background-color: rgb(32, 123, 150);
+  border: 1px solid #1c627a;
   color: #fff;
 }
 
 .signup-btn:hover {
-  background-color: darkblue;
+  background-color: rgb(25, 98, 121);
+  color: white;
 }
 
 .login-btn,
 .signup-btn {
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 0 1rem;
+  line-height: 2;
+  font-size: 14px;
+  margin: 12px 0 0;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .login-btn {
-  font-size: 16px;
-  font-weight: lighter;
+  font-weight: bolder;
+  border: none;
+  background-color: transparent;
+}
+
+.login:hover {
+  transition: color 0.3s;
+  color: black;
 }
 
 .homepage-icon {
   width: 90px;
-  height: 70px;;
-  /* size: 14px; */
+  height: 70px;
+  margin-top: 17px;
 }
 
 .logo {
@@ -62,13 +80,69 @@
   justify-content: center;
   width: 9.75rem;
   height: 3.375rem;
-  /* size: 14px; */
 }
 
 .logo-text {
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
-  /* padding-left: 5px; */
   text-decoration: none;
+  margin-top: 17px;
+  color: black;
+  font-weight: bolder;
+}
 
+.menu-section {
+  display: flex;
+  vertical-align: center;
+  flex-direction: column;
+  width: 100%;
+  max-height: 350px;
+}
+
+.dropdown-menu-items {
+  text-decoration: none;
+  background-color: transparent;
+  color: #666!important;
+  padding: .8rem 1rem;
+  cursor: pointer;
+}
+
+.menu-container {
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+  margin: 2px;
+  border-radius: 3px;
+}
+
+#dropdownMenuLink {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  width: 150px;
+  height: 55px;
+  /* padding-right: 2rem; */
+}
+
+.greeting {
+  color: black;
+  padding-right: 1rem;
+  width: 100px;
+  /* line-height: 3.375rem; */
+  /* padding: 0 1rem; */
+  background-color: transparent;
+}
+
+.dropdown-icon {
+  background: linear-gradient(to right,rgba(255,255,255,0) 0,white 25%);
+  width: 32px;
+  margin-top: 17px;
+  color: rgba(0,0,0,0.12);
+  background-color: transparent;
+  /* display: block;
+  position: absolute; */
+  /* top: 0;
+  right: 0; */
+  height: 54px;
+  z-index: 1;
 }

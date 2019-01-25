@@ -32,6 +32,11 @@
   font-weight: bold;
 }
 
+hr {
+  border: 1px solid rgba(0,0,0,0.12);
+  clear: both;
+}
+
 .close:hover,
 .close:focus {
   color: rgb(70, 70, 70);
