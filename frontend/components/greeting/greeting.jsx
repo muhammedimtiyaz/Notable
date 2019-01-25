@@ -70,9 +70,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <div className="menu-container">
               <div className="menu-section">
                 <div className="dropdown-menu-items" aria-labelledby="dropdownMenuLink">
-                  <Link to="/Profile">My Profile</Link>
-                  <Link to="/Favorites">My Favorite Restaurants</Link>
-                  <Link to="/" onClick={() => logout()}>Sign Out</Link>
+                  <select>
+                    <option><Link to="/Profile">My Profile</Link></option>
+                    <option><Link to="/Favorites">My Favorite Restaurants</Link></option>
+                    <option><Link to="/" onClick={() => logout()}>Sign Out</Link></option>
+                  </select>
                 </div>
               </div>
             </div>
