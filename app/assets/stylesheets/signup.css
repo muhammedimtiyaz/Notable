@@ -1,41 +1,32 @@
 .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 3;
   width: 100%;
   height: 100%;
-  /* overflow: auto; */
   background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.4);
 }
 
 .modal-signup-form {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: white;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid black;
-  width: 60%;
+  box-sizing: border-box;
+  width: 465px;
+  height: 860px;
+  padding: 0 27px 27px 27px;
+  padding-top: 15px;
+  margin-top: 15px;
 }
 
-/* .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+hr {
+  border: 1px solid rgba(0,0,0,0.12);
+  clear: both;
 }
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-} */
-
 
 .close {
   color: rgb(193, 193, 193);
@@ -56,23 +47,24 @@
 .signup-h2 {
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: lighter;
   line-height: 2;
-  color: #333;
-  margin: 0 0 3px;
+  /* color: #333; */
+  margin: 20px 0 0 0;
   box-sizing: border-box;
   cursor: default;
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   width: 396px;
   height: 27px;
-  padding-top: 16px;
+  padding-top: 0px;
+  color: rgb(85, 83, 83);
   text-rendering: optimizeLegibility;
 }
 
 .signup-input {
   width: 400px;
-  height: 60px;
+  height: 54px;
   padding: 16px;
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 3px;
@@ -80,11 +72,10 @@
   box-sizing: border-box;
   display: block;
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   margin-bottom: 8px;
   text-align: start;
-
 }
 
 .empty {
@@ -103,7 +94,7 @@
   background-color: #da3743;
   border-color: #b8222d;
   font-weight: 400;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   border-radius: 3px;
   color: white;
   cursor: pointer;
@@ -111,10 +102,37 @@
   padding: .875rem 1.75rem .9375rem;
   width: 400px;
   height: 60px;
-
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.login-button:hover {
+.signup-button:hover {
   background-color: #b8222d;
   color: white;
+}
+
+.location {
+  cursor: pointer;
+  width: 400px;
+  height: 54px;
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 3px;
+  background-color: white;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: start;
+}
+
+.privacy-policy-link {
+  color: #da3743;
+}
+
+.errors {
+  color: #da3743;
+  list-style: none;
 }

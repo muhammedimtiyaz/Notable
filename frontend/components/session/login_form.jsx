@@ -10,6 +10,8 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
+    this.demologin = this.demologin.bind(this);
+    this.demoUserHelper = this.demoUserHelper.bind(this);
     this.closeAndRemoveErrors = this.closeAndRemoveErrors.bind(this);
   }
 
@@ -23,42 +25,40 @@ class LoginForm extends React.Component {
     this.props.login(user);
   }
 
-  // demologin(e) {
-  //   e.preventDefault();
-  //   const email = 'demo'.split('');
-  //   const password = 'hunter12'.split('');
-  //   const submit = document.getElementById('login-button');
-  //   this.setState({ email: '', password: '' }, () =>
-  //     this.demoUserHelper(email, password, submit)
-  //   );
-  // }
+  demologin(e) {
+    e.preventDefault();
+    const email = 'demo'.split('');
+    const password = 'hunter12'.split('');
+    const submit = document.getElementById('login-button');
+    this.setState({ email: '', password: '' }, () =>
+      this.demoUserHelper(email, password, submit)
+    );
+  }
 
-  // demoUserHelper(email, password, submit) {
-  //   if (email.length > 0) {
-  //     this.setState(
-  //       { email: this.state.email + email.shift() }, () => {
-  //         window.setTimeout(() =>
-  //           this.demoUserHelper(email, password, submit), 50);
-  //       }
-  //     );
-  //   } else if (password.length > 0) {
-  //     this.setState(
-  //       { password: this.state.password + password.shift() }, () => {
-  //         window.setTimeout(() =>
-  //           this.demoUserHelper(email, password, submit), 50);
-  //       }
-  //     );
-  //   } else {
-  //     submit.click();
-  //   }
-  // }
+  demoUserHelper(email, password, submit) {
+    if (email.length > 0) {
+      this.setState(
+        { email: this.state.email + email.shift() }, () => {
+          window.setTimeout(() =>
+            this.demoUserHelper(email, password, submit), 50);
+        }
+      );
+    } else if (password.length > 0) {
+      this.setState(
+        { password: this.state.password + password.shift() }, () => {
+          window.setTimeout(() =>
+            this.demoUserHelper(email, password, submit), 50);
+        }
+      );
+    } else {
+      submit.click();
+    }
+  }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state).then(this.props.closeModal);
   }
-
-  // () => this.props.history.push("/")
 
   update(field) {
     return e => {
@@ -109,9 +109,10 @@ class LoginForm extends React.Component {
               value={this.state.password}
               required/>
             <button id="login-button" className="login-button" onClick={() => this.props.removeErrors()}>Sign In</button>
+          </form>
             <div className="demo-user-button">
               <form onSubmit={this.handleDemo}>
-                <input required type="submit" value="Demo Login" />
+                <input required type="submit" value="Demo Login" onClick={this.demologin}/>
               </form>
             </div>
             <hr></hr>
@@ -130,7 +131,6 @@ class LoginForm extends React.Component {
               <span>New To OpenTable?</span>&nbsp;
               {this.props.signupForm}
             </div>
-          </form>
         </div>
       </div>
     )
