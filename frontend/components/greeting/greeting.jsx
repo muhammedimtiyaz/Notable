@@ -34,13 +34,14 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   // );
 
   const mainNavWithSessionLinks = () => {
+    debugger
     return (
       <div className="main-nav">
         <Link to="/" className="header-link">
-          <div className="logo left-nav">
+          <section className="logo left-nav">
             <img className="homepage-icon" src={window.openTableIconURL} />
             <div className="logo-text">NoTable</div>
-          </div>
+          </section>
         </Link>
         <div className="right-nav">
           <nav className="login-signup">

@@ -24,7 +24,11 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createNewUser(this.state).then(this.props.closeModal);
+    if (this.state.password !== this.state.re_enter) {
+      this.props.receiveSessionErrors( ["Passwords must match"] );
+    } else {
+      this.props.createNewUser(this.state).then(this.props.closeModal);
+    }
   }
 
   closeAndRemoveErrors(e) {
