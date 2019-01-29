@@ -4,9 +4,9 @@ class Restaurant < ApplicationRecord
 
   after_initialize :ensure_open_time, :ensure_close_time, :ensure_star
 
-  # has_many :reservations,
-  # has_many :reviews,
-  # has_many :favorites
+  has_many :reservations,
+  has_many :reviews,
+  has_many :favorites
   def ensure_logo
     self.logo ||= "https://res.cloudinary.com/chengzii/image/upload/v1523493008/default_restaurant_img.jpg";
   end

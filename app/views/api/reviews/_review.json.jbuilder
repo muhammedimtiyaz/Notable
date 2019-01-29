@@ -1,0 +1,12 @@
+json.extract! review,
+:id,
+:user_id,
+:restaurant_id,
+:user,
+:restaurant,
+:comment,
+:overall_rating,
+:food_rating,
+:service_rating,
+:ambience_rating,
+:created_at

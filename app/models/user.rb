@@ -3,10 +3,13 @@ class User < ApplicationRecord
   validates :username, :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  # has_many :reservations
-  # has_many :favorite_restaurants
-  # has_many :owned_restaurants
-  # has_many :reviews
+  has_many :reservations
+  has_many :favourites
+  has_many :favorited_restaurants,
+    through: :favourites,
+    source: :restaurant
+  has_many :owned_restaurants
+  has_many :reviews
 
 
   attr_reader :password
