@@ -1,6 +1,6 @@
 class Api::ReservationsController < ApplicationController
   def index
-    @reservations = current_user.reservations.order(:start_time)
+    @reservations = current_user.reservations.order(:date)
     render json: @reservations
   end
 
@@ -44,6 +44,6 @@ class Api::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:user_id, :restaurant_id, :start_time, :end_time, :seats)
+    params.require(:reservation).permit(:user_id, :restaurant_id, :time, :date, :seats)
   end
 end

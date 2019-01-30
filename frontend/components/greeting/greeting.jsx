@@ -34,7 +34,6 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   // );
 
   const mainNavWithSessionLinks = () => {
-    debugger
     return (
       <div className="main-nav">
         <Link to="/" className="header-link">

@@ -21,7 +21,7 @@ const restaurantReducer = (state = {}, action) => {
       favourite = action.favourite;
       return merge({}, state, { [favourite.id]: favourite });
     case DESTROY_FAVOURITE:
-      favourite = action.favoriteId;
+      favourite = action.favouriteId;
       return merge({}, state, { [favourite.id]: favourite });
     default:
       return state;

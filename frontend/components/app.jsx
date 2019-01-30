@@ -11,6 +11,8 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session/signup_container';
 import LogInFormContainer from './session/login_form_container';
+import FeatureAreasContainer from "./featured_areas/featured_areas_container";
+import Homepage from "./homepage/homepage";
 // import SearchContainer from './search/search_container';
 // import BenchShowContainer from './bench_show/bench_show_container';
 // import BenchFormContainer from './bench_form/bench_form_container';
@@ -22,6 +24,9 @@ const App = () => (
     <Modal />
     <header>
       <GreetingContainer />
+      <Homepage />
+      {/* <FeatureAreasContainer /> */}
+
     </header>
     <Switch>
     </Switch>

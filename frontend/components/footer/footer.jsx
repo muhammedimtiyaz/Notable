@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () {
+const Footer = () => {
   return (
     <div className="main-page-footer">
       <div className="footer-content">

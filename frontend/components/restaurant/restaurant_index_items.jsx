@@ -10,9 +10,9 @@ class RestaurantIndexItems extends React.Component {
   getStar() {
     let starCount = this.props.restaurant.star
     const stars = [];
-    for (let i = 0; i < starCount; i++) {
+    for (let idx = 0; idx < starCount; idx++) {
       stars.push(
-        <img key={i} src='https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523389939/star.png' />
+        <i key={idx} class="fa fa-star" aria-hidden="true"></i>
       );
     }
     return stars;

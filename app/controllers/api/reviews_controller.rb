@@ -16,7 +16,7 @@ class Api::ReviewsController < ApplicationController
   def create
     relevant_reservations = current_user.reservations.where(restaurant_id: params[:restaurantId])
     current_reservation = relevant_reservations.order(created_at: :desc).first
-    if Time.now > current_reservation.end_time
+    if Time.now > current_reservation.time
       @review = current_user.reviews.new(review_params)
       if @review.save
         render :show

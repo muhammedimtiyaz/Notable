@@ -36,15 +36,13 @@ class Profile extends React.Component {
     };
   }
 
-  getStar(response){
-    let starCount = response.restaurant.star;
+  getStar(reservation){
+    let starCount = reservation.restaurant.star;
     const stars = [];
 
-    for (let i = 0; i < starCount; i++) {
+    for (let idx = 0; idx < starCount; idx++) {
       stars.push(
-        <img
-          key={i}
-          src='https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523389939/star.png' />
+        <i key={idx} class="fa fa-star" aria-hidden="true"></i>
       );
     }
     return stars;
@@ -52,30 +50,30 @@ class Profile extends React.Component {
 
 
   getUpcomingCount() {
-    const upcoming = [];
+    const upcomingReservationCount = [];
     const today = new Date().toJSON();
 
-    const allRes = Object.values(this.props.reservations);
-    allRes.forEach((reservation) => {
+    const allReservations = Object.values(this.props.reservations);
+    allReservations.forEach((reservation) => {
       if(Date.parse(today.slice(0, 10)) <= Date.parse(reservation.date)) {
-        upcoming.push(reservation);
+        upcomingReservationCount.push(reservation);
       }
     });
 
-    return upcoming.length;
+    return upcomingReservationCount.length;
   }
 
   getPastCount() {
-    const past = [];
+    const pastReservationCount = [];
     const today = new Date().toJSON();
 
-    const allRes = Object.values(this.props.reservations);
-    allRes.forEach((reservation) => {
+    const allReservations = Object.values(this.props.reservations);
+    allReservations.forEach((reservation) => {
       if(Date.parse(today.slice(0, 10)) > Date.parse(reservation.date)) {
-        past.push(reservation);
+        pastReservationCount.push(reservation);
       }
     });
-    return past.length;
+    return pastReservationCount.length;
   }
 
   upcomingReservations() {
@@ -225,7 +223,7 @@ class Profile extends React.Component {
               </Link>
 
               <div className='past-res-date'>
-                Michelin Star Level: {fav.restaurant.star}
+                Stars: {fav.restaurant.star}
               </div>
               <div className='past-res-time'>
                 Cuisine: {fav.restaurant.cuisine}
@@ -328,4 +326,4 @@ class Profile extends React.Component {
 
 }
 
-export default UserProfile;
+export default Profile;

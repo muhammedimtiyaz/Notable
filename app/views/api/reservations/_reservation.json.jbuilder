@@ -4,5 +4,5 @@ json.extract! reservation,
 :restaurant_id,
 :restaurant,
 :seats,
-:start_time,
-:end_time
+:time,
+:date

@@ -13,6 +13,6 @@ export default (state = {}, action) => {
       delete newState[action.reservationId];
       return newState;
     default:
-      return states;
+      return state;
   }
 }

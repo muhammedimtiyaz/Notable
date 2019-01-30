@@ -22,6 +22,7 @@ export const receiveRestaurant = (restaurant) => {
 };
 
 export const receiveRestaurantErrors = (errors) => {
+  debugger
   return {
     type: RECEIVE_RESTAURANT_ERRORS,
     errors
@@ -52,6 +53,6 @@ export const createRestaurant = (restaurant) => {
   return RestaurantApiUtil.createRestaurant(restaurant).then(restaurant => dispatch(receiveRestaurant(restaurant)), err => dispatch(receiveRestaurantErrors(err.responseJSON)));
 };
 
-export const searchRestaurant = searchTerm => dispatch => {
+export const searchRestaurants = searchTerm => dispatch => {
   return RestaurantApiUtil.fetchSearchRestaurants(searchTerm).then(response => dispatch(receiveRestaurants(response)), err => dispatch(receiveRestaurantErrors(err.responseJSON)));
 };
