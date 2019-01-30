@@ -135,4 +135,4 @@ class CreateRestaurant extends React.Component {
   }
 
 }
-export default withRouter(AddRestaurant);
+export default withRouter(CreateRestaurant);

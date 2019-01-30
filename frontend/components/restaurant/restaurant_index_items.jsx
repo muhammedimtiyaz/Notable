@@ -56,4 +56,4 @@ class RestaurantIndexItems extends React.Component {
   }
 }
 
-export default RestaurantIndexItem;
+export default RestaurantIndexItems;
