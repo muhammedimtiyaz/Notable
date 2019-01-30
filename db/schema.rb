@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_063854) do
+ActiveRecord::Schema.define(version: 2019_01_30_223934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favourites", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "restaurant_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_favourites_on_restaurant_id"
+    t.index ["user_id", "restaurant_id"], name: "index_favourites_on_user_id_and_restaurant_id", unique: true
+    t.index ["user_id"], name: "index_favourites_on_user_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "restaurant_id", null: false
+    t.string "time", null: false
+    t.string "date", null: false
+    t.integer "seats", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
+    t.index ["user_id", "time", "date"], name: "index_reservations_on_user_id_and_time_and_date", unique: true
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.integer "owner_id", null: false
@@ -22,8 +44,8 @@ ActiveRecord::Schema.define(version: 2019_01_28_063854) do
     t.integer "star", null: false
     t.string "city", null: false
     t.string "state", null: false
-    t.integer "zipcode", null: false
-    t.integer "phone_number", null: false
+    t.string "zipcode", null: false
+    t.string "phone_number", null: false
     t.string "open_time", null: false
     t.string "close_time", null: false
     t.string "cuisine", null: false
@@ -36,6 +58,21 @@ ActiveRecord::Schema.define(version: 2019_01_28_063854) do
     t.index ["cuisine"], name: "index_restaurants_on_cuisine"
     t.index ["name"], name: "index_restaurants_on_name"
     t.index ["star"], name: "index_restaurants_on_star"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "restaurant_id", null: false
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "overall_rating"
+    t.integer "food_rating"
+    t.integer "service_rating"
+    t.integer "ambience_rating"
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
+    t.index ["user_id", "restaurant_id"], name: "index_reviews_on_user_id_and_restaurant_id", unique: true
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

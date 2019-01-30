@@ -66,8 +66,8 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <button className="dropbtn">Hi, {currentUser.username}<i className="fa fa-angle-down" aria-hidden="true"></i>
             </button>
             <div className="dropdown-content">
-              <Link to={`/users/${currentUser.id}`}>My Profile</Link>
-              <Link to="/" onClick={() => logout()}>Sign Out</Link>
+              <Link className="dropdown-content-link" to={`/users/${currentUser.id}`}>My Profile</Link>
+              <Link className="dropdown-content-link" to="/" onClick={() => logout()}>Sign Out</Link>
             </div>
           </div>
             {/* <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
