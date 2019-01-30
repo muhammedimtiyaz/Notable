@@ -11,7 +11,7 @@ const msp = state => ({
 
 const mdp = dispatch => ({
   createReservation: (reservation) => dispatch(createReservation(reservation)),
-  removeErrors: ([]) => dispatch(receiveReservationErrors([])),
+  removeErrors: () => dispatch(receiveReservationErrors([])),
 });
 
 export default connect(msp, mdp)(ReservationForm);
