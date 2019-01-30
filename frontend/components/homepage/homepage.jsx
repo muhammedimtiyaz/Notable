@@ -4,8 +4,7 @@ import FeaturedAreasContainer from '../featured_areas/featured_areas_container';
 import SliderContainer from '../slider/slider_container';
 import Footer from "../footer/footer";
 import { Link } from 'react-router-dom';
-// import { ProtectedRoute } from '../../util/route_util';
-// import AddRestaurant from '../restaurant/add_restaurant_container';
+
 
 const Homepage =  () => (
   <section id="main-body">
@@ -37,7 +36,6 @@ const Homepage =  () => (
     <section className="contact">
       <Footer />
     </section>
-
   </section>
 );
 

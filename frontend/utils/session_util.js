@@ -20,7 +20,3 @@ export const logoutAjax = () => (
     url: "/api/session"
   })
 );
-
-// window.signupAjax = signupAjax;
-// window.loginAjax = loginAjax;
-// window.logoutAjax = logoutAjax;

@@ -62,8 +62,15 @@ const Greeting = ({ currentUser, logout, openModal }) => {
           </div>
         </Link>
         <div className="right-nav">
-          <div className="dropdown-menu">
-            <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div className="dropdown">
+            <button className="dropbtn">Hi, {currentUser.username}<i className="fa fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div className="dropdown-content">
+              <Link to={`/users/${currentUser.id}`}>My Profile</Link>
+              <Link to="/" onClick={() => logout()}>Sign Out</Link>
+            </div>
+          </div>
+            {/* <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <p className="greeting">Hi, {currentUser.username}</p>
               <span className="dropdown-icon"><i className="fas fa-chevron-circle-down"></i></span>
             </a>
@@ -74,12 +81,8 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                     <option><Link to="/Profile">My Profile</Link></option>
                     <option><Link to="/Favorites">My Favorite Restaurants</Link></option>
                     <option><Link to="/" onClick={() => logout()}>Sign Out</Link></option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </select> */}
+        </div> 
       </div>
     )
   }

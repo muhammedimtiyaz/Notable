@@ -9,31 +9,30 @@ import {
 } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
-import SignUpFormContainer from './session/signup_container';
-import LogInFormContainer from './session/login_form_container';
-import FeatureAreasContainer from "./featured_areas/featured_areas_container";
+import Footer from "./footer/footer";
+import RestaurantIndexContainer from "./restaurant/restaurant_index_container";
+import CreateRestaurant from "./restaurant/create_restaurant_container";
+import RestaurantDetailContainer from "./restaurant/restaurant_detail_container";
+import UserProfileContainer from "./user/profile_container";
 import Homepage from "./homepage/homepage";
-// import SearchContainer from './search/search_container';
-// import BenchShowContainer from './bench_show/bench_show_container';
-// import BenchFormContainer from './bench_form/bench_form_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 import Modal from "./modal";
 
 const App = () => (
   <div>
     <Modal />
-    <header>
-      <GreetingContainer />
-      <Homepage />
-      {/* <FeatureAreasContainer /> */}
-
+    <header id="top-of-page">
+      <Route path="/" component={GreetingContainer} />
     </header>
     <Switch>
+      <ProtectedRoute path="/restaurants/new" component={CreateRestaurant} />
+      <Route exact path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
+      <ProtectedRoute exact path="/users/:userId" component={UserProfileContainer} />
+      <Route path="/restaurants" component={RestaurantIndexContainer} />
+      <Route path="/" component={Homepage} />
     </Switch>
+    <Footer />
   </div>
 );
 
 export default App;
-
-/* <AuthRoute exact path="/login" component={LogInFormContainer} />
-<AuthRoute exact path="/signup" component={SignUpFormContainer} /> */

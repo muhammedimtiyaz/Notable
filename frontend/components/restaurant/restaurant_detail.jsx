@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
-// import ReservationFormContainer from '../reservation/reservation_form_container';
-// import ReviewFormContainer from '../review/review_form_container';
-// import ReviewIndexContainer from '../review/review_index_container';
+import ReservationFormContainer from '../reservation/reservation_form_container';
+import ReviewFormContainer from '../review/review_form_container';
+import ReviewIndexContainer from '../review/review_index_container';
 import LoadingSpinner from "../loading_spinner";
 
 
@@ -10,12 +10,9 @@ class RestaurantDetail extends React.Component {
   constructor(props) {
     super(props);
     this.scrollToElement = this.scrollToElement.bind(this);
-    // this.reviewFromChecker = this.reviewFromChecker.bind(this);
-
     this.getAveRating = this.getAveRating.bind(this);
     this.deleteFavourite = this.deleteFavourite.bind(this);
     this.createFavourite = this.createFavourite.bind(this);
-
   }
 
 
@@ -48,7 +45,7 @@ class RestaurantDetail extends React.Component {
 
 
   reviewFromChecker() {
-    if (this.props.loading) return <LoadingSpinner/>;
+    if (this.props.loading) return <LoadingSpinner />;
 
     if(!this.props.currentUser) { return null; }
 
@@ -171,7 +168,7 @@ class RestaurantDetail extends React.Component {
 
 
   render() {
-    if (this.props.loading) return <LoadingSpinner/>;
+    if (this.props.loading) return <LoadingSpinner />;
 
     if (!this.props.restaurant) return null;
     const restaurant = this.props.restaurant;
