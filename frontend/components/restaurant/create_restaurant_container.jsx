@@ -9,7 +9,7 @@ const msp = (state) => ({
 
 const mdp = dispatch => ({
     createRestaurant: restaurant => dispatch(createRestaurant(restaurant)),
-    clearErrors: () => dispatch(receiveRestaurantErrors([])),
+    clearErrors: ([]) => dispatch(receiveRestaurantErrors([])),
 });
 
 export default connect(msp, mdp)(CreateRestaurant);

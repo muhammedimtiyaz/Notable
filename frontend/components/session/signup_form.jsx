@@ -54,7 +54,7 @@ class Signup extends React.Component {
     return (
       <div id="signup" className="modal">
         <div className="modal-signup-form">
-        <h2>Welcome to OpenTable!</h2>
+        <h2>Welcome to NoTable!</h2>
         <span className="close" onClick={this.closeAndRemoveErrors}>&times;</span>
         <hr/>
         {this.renderErrors()}

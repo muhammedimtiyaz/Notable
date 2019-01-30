@@ -128,7 +128,7 @@ class LoginForm extends React.Component {
                 </button>
             </div>
             <div className="footer">
-              <span>New To OpenTable?</span>&nbsp;
+              <span>New To NoTable?</span>&nbsp;
               {this.props.signupForm}
             </div>
         </div>

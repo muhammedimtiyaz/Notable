@@ -3,7 +3,7 @@ import { Route, withRouter } from 'react-router-dom';
 // import ReservationFormContainer from '../reservation/reservation_form_container';
 // import ReviewFormContainer from '../review/review_form_container';
 // import ReviewIndexContainer from '../review/review_index_container';
-// import LoadingSpinner from "../loading_spinner/loading_spinner";
+import LoadingSpinner from "../loading_spinner";
 
 
 class RestaurantDetail extends React.Component {

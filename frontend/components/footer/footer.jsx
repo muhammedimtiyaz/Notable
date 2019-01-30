@@ -2,14 +2,24 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="main-page-footer">
-      <div className="footer-content">
-        Muhammed Imtiyaz
-        <a href="https://github.com/muhammedimtiyaz"><img src={window.githubURL} />Github</a>
-        <a href="https://www.linkedin.com/in/muhammed-imtiyaz/"><img src={window.linkedinURL} />LinkedIn</a>
+    <footer className="main-footer" id="footer">
+      <div className="footer-body">
+
+        <div className="footer-about">
+          <p>Welcome to NoTable! Notable is a clone of OpenTable created using Rails (backend), Postgresql (DB)  and React/Redux (frontend).</p>
+        </div>
+
+        <div className="footer-links">
+          <p>Muhammed Imtiyaz</p>
+          <br />
+          <a href="https://github.com/muhammedimtiyaz" target="_blank"><img src={window.githubURL} />Github</a>
+          <br />
+          <a href="https://www.linkedin.com/in/muhammed-imtiyaz/" target="_blank"><img src={window.linkedinURL} />LinkedIn</a>
+        </div>
+
       </div>
-    </div>
-  )
+    </footer>
+  );
 }
 
 export default Footer;
