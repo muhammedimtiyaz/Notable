@@ -22,7 +22,6 @@ export const receiveRestaurant = (restaurant) => {
 };
 
 export const receiveRestaurantErrors = (errors) => {
-  debugger
   return {
     type: RECEIVE_RESTAURANT_ERRORS,
     errors

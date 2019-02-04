@@ -1,0 +1,169 @@
+.restaurant-showpage {
+  background-color: #f7f7f7;
+}
+
+.restaurant-showpage-header {
+  width: 100%;
+  min-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-bottom: 20px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.showpage-header-img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  top: -260px;
+}
+
+.restaurant-main-container {
+  position: relative;
+  display: flex;
+  width: 84%;
+  margin: -66px auto 0;
+  padding-bottom: 40px;
+
+}
+.restaurant-main-left {
+  width: 68%;
+  min-width: 460px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  // border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 20px;
+}
+
+.restaurant-main-right {
+  width: 30%;
+  min-width: 300px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.nav-link-wrapper {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.page-nav-link{
+  padding: 6px 0;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.page-nav-link:first-of-type {
+  border-bottom: 2px solid #da3743;
+  color: #da3743;
+}
+
+.page-nav-link:hover {
+  border-bottom: 2px solid #da3743;
+  color: #da3743;
+}
+
+.restaurant-nav-info {
+  position: relative;
+}
+
+.restaurant-nav-name {
+  display: flex;
+  font-size: 46px;
+  padding: 20px 0;
+  font-weight: bold;
+}
+.restaurant-nav-name span {
+  position: relative;
+  top: -10px;
+}
+
+// .restaurant-nav-favorite {
+//   position: absolute;
+//   right: 0;
+//   bottom: 70px;
+//   height: 30px;
+//   line-height: 30px;
+//   padding: 0 8px;
+//   border-radius: 3px;
+// }
+
+.restaurant-nav-detail {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+
+
+
+.restaurant-nav-detail div {
+  padding-right: 20px;
+}
+
+.restaurant-nav-detail div i {
+  padding-right: 3px;
+}
+
+.rating_icon {
+}
+
+.restaurant-content-about {
+  padding: 20px 0;
+}
+
+.restaurant-content-about p {
+  padding: 4px 0;
+}
+
+.restaurant-content-about p:first-of-type {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+.restaurant-reservation {
+  background: #fff;
+  position: sticky;
+  top:0;
+}
+
+.restaurant-reviews {
+  background: #fff;
+  padding: 10px 0;
+}
+
+.favorite-btn {
+  text-align: center;
+  padding: 16px 0;
+  border: 1px solid #d8d9db;
+  margin: 0 auto;
+  background: #fff;
+  position: sticky;
+  top: 270px;
+  // border-radius: 3px;
+}
+
+.favorite-btn i {
+  padding-right: 10px;
+}
+
+.favorite-btn:hover {
+  border: 2px solid #da3743;
+}
+
+
+.favorite-active {
+  border: 2px solid #da3743;
+}
+
+.favorite-active i {
+  color: #da3743;
+}

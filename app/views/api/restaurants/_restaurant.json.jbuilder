@@ -14,12 +14,12 @@ json.extract! restaurant,
 :description,
 :logo
 
-json.ratingArr restaurant.overall_rating
+json.ratingArr restaurant.reservations.overall_rating
 
 json.reservationUserIds restaurant.reservations.pluck(:user_id).uniq
 
 json.countReview restaurant.reviews.pluck(:user_id).length
 
 if current_user
-  json.currentUserLikes !!restaurant.favorites.find_by(user_id: current_user.id)
+  json.currentUserLikes !!restaurant.favourites.find_by(user_id: current_user.id)
 end

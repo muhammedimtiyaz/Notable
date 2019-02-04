@@ -1,0 +1,101 @@
+
+.search-form-container {
+  border: 1px solid #fff;
+  height: 180px;
+  width: 100%;
+  min-width: 460px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px 0px #ccc;
+  min-width: 580px;
+}
+
+.search-form-container h3 {
+text-align: center;
+font-size: 46px;
+font-weight: bold;
+padding-top: 30px;
+}
+
+
+
+.search-form {
+align-items: center;
+text-align: center;
+height: 40%;
+padding-top: 20px;
+}
+
+.search-form input {
+display: inline-block;
+height: 50px;
+}
+
+.search-input {
+border: 1px solid #ccc;
+width: 58%;
+font-size: 15px;
+padding-left: 40px;
+background: url("https://res.cloudinary.com/chengzii/image/upload/v1523509175/search_icon.png") no-repeat;
+background-size: 25px 25px;
+background-position: 10px 13px;
+}
+
+.search-form input[type="submit"] {
+height: 52px;
+width: 140px;
+font-size: 15px;
+}
+
+
+.submit-button {
+background-color: #da3743;
+border-color: #b8222d;
+color: #fff;
+// height: 60px;
+padding: 0 10px;
+}
+
+.submit-button:hover{
+background: #b8222d;
+}
+
+.refine-search-form {
+display: flex;
+justify-content: space-evenly;
+}
+
+.restaurant-search-error {
+padding: 30px 0 30px 30px;
+text-align: center;
+}
+
+.restaurant-search-error div{
+color: grey;
+margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+.search-form-container h3 {
+  font-size: 36px;
+}
+}
+
+@media (max-width: 1052px) {
+.search-form-container h3 {
+  font-size: 30px;
+}
+}
+
+@media (max-width: 920px) {
+.search-form-container h3 {
+  font-size: 24px;
+}
+}
+
+@media (max-width: 700px) {
+.search-form-container h3 {
+  font-size: 22px;
+}
+}

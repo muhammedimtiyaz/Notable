@@ -44,7 +44,7 @@ export const requestFavourite = (id) => dispatch => (
 
 export const requestUserFavourites = userId => dispatch => (
   FavouriteApiUtil.fetchUserFavourites(userId)
-    .then(favourites => dispatch(receiveFavourite(favourites)),
+    .then(favourites => dispatch(receiveFavourites(favourites)),
           err => dispatch(receiveFavouriteErrors(err.responseJSON)))
 );
 
@@ -54,6 +54,7 @@ export const requestUserFavourites = userId => dispatch => (
 export const deleteFavourite = id => dispatch => (
   FavouriteApiUtil.deleteFavourite(id)
     .then(favourite => dispatch(removeFavourite(favourite)),
-      err => dispatch(receiveFavouriteErrors(err.responseJSON))
-    )
+      err => {
+       return dispatch(receiveFavouriteErrors(err.responseJSON))
+      })
 );

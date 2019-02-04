@@ -70,7 +70,7 @@
 
 .homepage-icon {
   width: 90px;
-  height: 70px;
+  /* height: 70px; */
   margin-top: 17px;
 }
 
@@ -92,61 +92,6 @@
   font-weight: bolder;
 }
 
-/* .menu-section {
-  display: flex;
-  vertical-align: center;
-  flex-direction: column;
-  width: 100%;
-  max-height: 350px;
-}
-
-.dropdown-menu-items {
-  text-decoration: none;
-  background-color: transparent;
-  color: #666!important;
-  padding: .8rem 1rem;
-  cursor: pointer;
-}
-
-.menu-container {
-  background: #fff;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
-  margin: 2px;
-  border-radius: 3px;
-}
-
-#dropdownMenuLink {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  cursor: pointer;
-  width: 150px;
-  height: 55px;
-  /* padding-right: 2rem; */
-/* } */
-
-/* .greeting {
-  color: black;
-  padding-right: 1rem;
-  width: 100px;
-  line-height: 3.375rem;
-  padding: 0 1rem;
-  background-color: transparent;
-}
-
-.dropdown-icon {
-  background: linear-gradient(to right,rgba(255,255,255,0) 0,white 25%);
-  width: 32px;
-  margin-top: 17px;
-  color: rgba(0,0,0,0.12);
-  background-color: transparent;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 54px;
-  z-index: 1;
-} */
 
 .dropdown {
   float: left;
@@ -164,11 +109,10 @@
   padding: 14px 16px;
   background-color: transparent;
   /* font-family: inherit; Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  margin-top: 0; /* Important for vertical align on mobile phones */
   cursor: pointer;
 }
 
-/* Add a red background color to navbar links on hover */
 .dropdown:hover .dropbtn {
   color: black;
 }
@@ -177,7 +121,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: transparent;
+  background-color: whitesmoke;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -201,6 +145,6 @@
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:active .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }

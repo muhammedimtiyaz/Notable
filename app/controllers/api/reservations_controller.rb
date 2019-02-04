@@ -1,7 +1,7 @@
 class Api::ReservationsController < ApplicationController
   def index
     @reservations = current_user.reservations.order(:date)
-    render json: @reservations
+    render :index
   end
 
   def show

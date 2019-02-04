@@ -1,0 +1,57 @@
+.restaurant-reviews {
+}
+
+.restaurant-reviews h5 {
+  font-size: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.review-ul {
+  padding: 10px 0;
+}
+
+.review-li {
+  padding: 10px 4px;
+}
+
+
+.review-li span {
+  padding-right: 20px;
+}
+
+.review-li span:first-of-type {
+  padding-right: 6px;
+}
+
+.review-name {
+  font-size: 20px;
+}
+
+.review-li p {
+  padding: 10px;
+  word-break:break-all;
+}
+
+.rate-icon {
+  margin-right: 25px;
+}
+
+.rate-icon img {
+  position: relative;
+  top: 2px;
+}
+
+.review-form-messgae {
+  font-size: 20px;
+  padding: 20px 0;
+  text-align: center;
+  color: #da3743;
+}
+
+#delete-review {
+  height: 20px;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 0;
+}

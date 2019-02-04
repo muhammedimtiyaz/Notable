@@ -1,0 +1,15 @@
+body {
+  background-color: #f7f7f7;
+}
+
+header, main {
+  background: #fff;
+}
+#root {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+i {
+  color: #939393;
+}

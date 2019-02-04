@@ -42,7 +42,7 @@ class Profile extends React.Component {
 
     for (let idx = 0; idx < starCount; idx++) {
       stars.push(
-        <i key={idx} class="fa fa-star" aria-hidden="true"></i>
+        <i key={idx} className="fa fa-star" aria-hidden="true"></i>
       );
     }
     return stars;
@@ -77,6 +77,7 @@ class Profile extends React.Component {
   }
 
   upcomingReservations() {
+    debugger
     const upcoming = [];
     const today = new Date().toJSON();
 
@@ -259,15 +260,15 @@ class Profile extends React.Component {
           <aside className='user-profile-side'>
             <div
               className='user-nav-link'
-              onClick={this.scrollTo(this.upcomingSection)}
+              onClick={this.scrollToElement(this.upcomingSection)}
             >Upcoming Reservations</div>
             <div
               className='user-nav-link'
-              onClick={this.scrollTo(this.pastSection)}
+              onClick={this.scrollToElement(this.pastSection)}
             >Past Reservations</div>
             <div
               className='user-nav-link'
-              onClick={this.scrollTo(this.favouriteSection)}
+              onClick={this.scrollToElement(this.favouriteSection)}
             >Favourite Restaurants</div>
           </aside>
 

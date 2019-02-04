@@ -33,9 +33,6 @@ const Homepage =  () => (
         Learn More
       </Link>
     </section>
-    <section className="contact">
-      <Footer />
-    </section>
   </section>
 );
 

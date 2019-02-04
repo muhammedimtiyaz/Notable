@@ -13,7 +13,7 @@ class SearchForm extends React.Component {
 
   update(field) {
     return e => this.setState({
-      [field]: e.Target.value
+      [field]: e.currentTarget.value
     });
   }
 

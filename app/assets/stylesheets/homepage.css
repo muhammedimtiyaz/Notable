@@ -1,0 +1,235 @@
+
+.hero-img-container {
+  background: url("https://www.themeparktourist.com/sites/default/files/u2616/chef-tasting-wine-dinner-at-flying-fish-cafe-00-full.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0 -40px;
+  height: 360px;
+  min-width:900px;
+  z-index: 2;
+}
+
+.content {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: -120px;
+  min-width: 580px;
+}
+
+.cities, .cuisines {
+  margin-top: 40px;
+  padding-bottom: 2px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px 0px #ccc;
+}
+
+.cities h3, .cuisines h3{
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+  font-size: 24px;
+  padding: 10px 0 20px 0;
+  margin: 10px 20px;
+  font-weight: bold;
+}
+
+.city-col h4, .city-col h4{
+  /* border-bottom: 1px solid #ccc; */
+  /* margin: 20px 0; */
+  /* padding: 10px 0 20px 0; */
+  font-size: 14px;
+  margin: -180px;
+  margin-left: 115px;
+  width: 33.33%;
+  height: 200px;
+  color: white;
+}
+
+.city-list {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.city-col {
+  width: 33.33%;
+  /* width: 372px; */
+  height: 200px;
+
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 200px;
+
+  text-shadow: 1px 1px 2px #000;
+}
+
+.city-col:hover {
+  opacity: 0.80;
+  cursor: pointer;
+}
+
+#new_york {
+  background: url("https://components.otstatic.com/components/oc-featured-metros/1.1.3/assets/img/metros/us-new-york-city.jpg") no-repeat;
+  background-size: cover;
+}
+
+#los_angeles {
+  background: url("https://components.otstatic.com/components/oc-featured-metros/1.1.3/assets/img/metros/us-los-angeles.jpg");
+  background-size: cover;
+}
+
+#chicago {
+  background: url("https://components.otstatic.com/components/oc-featured-metros/1.1.3/assets/img/metros/us-chicago.jpg");
+  background-size: cover;
+}
+
+#san_francisco {
+  background: url("https://components.otstatic.com/components/oc-featured-metros/1.1.3/assets/img/metros/us-san-francisco.jpg");
+  background-size: cover;
+}
+
+#washington {
+  background: url("https://res.cloudinary.com/chengzii/image/upload/v1523398619/dc_city.jpg");
+  background-size: cover;
+}
+
+#seattle {
+  background: url("https://res.cloudinary.com/chengzii/image/upload/v1523398619/seattle_city.jpg");
+  background-size: cover;
+}
+
+.section-footer {
+  background-image: url("https://res.cloudinary.com/chengzii/image/upload/v1523146697/footer.jpg");
+  background-size: cover;
+  background-position: 0 -240px;
+
+  height: 280px;
+
+  min-width: 400px;
+  width: 75%;
+  margin: 40px auto;
+  text-align: center;
+  color: #fff;
+  font-weight: lighter;
+
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px 0px #ccc;
+}
+
+.section-footer h4 {
+  font-size: 24px;
+  padding: 40px 0;
+  text-shadow: 1px 1px 4px #000;
+}
+
+
+#addRestaurant {
+  display: inline-block;
+  margin-top: 30px;
+  width: 160px;
+  height: 30px;
+  padding: 10px;
+  line-height: 30px;
+  border-radius: 3px;
+}
+
+.main-footer {
+  height: 150px;
+  width: 100%;
+  background: #333;
+  border-top: 1px solid rgba(0,0,0,.10);
+}
+
+.footer-body {
+  min-width: 400px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 30px;
+  color: #ccc;
+}
+
+.footer-body i {
+  font-size: 17px;
+  padding-right: 12px;
+}
+
+
+.footer-about {
+  width: 320px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.footer-links p {
+  display: inline;
+  line-height: 24px;
+}
+.footer-links a i.user-icon {
+  font-size: 15px;
+}
+
+/* back to top button in app.jsx */
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 170px; /* Place the button at the bottom of the page */
+     /* right: 11%; Place the button 30px from the right */
+     /* z-index: 99; Make sure it does not overlap */
+     /* position: absolute; */
+
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #b7b7b7; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 12px; /* Increase font size */
+}
+
+#backToTop:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+@media (max-width: 1660px) {
+  .city-col {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .city-col {
+    width: 50%;
+  }
+  .section-footer {
+    background-position: 0px 0px;
+  }
+  #backToTop {
+    right: 8%;
+  }
+}
+
+@media (max-width: 900px) {
+  .city-col {
+    width: 100%;
+  }
+  #backToTop {
+    right: 4%;
+  }
+}
+
+@media (max-width: 750px) {
+  .city-col {
+    width: 100%;
+  }
+  #backToTop {
+    display: none;
+  }
+}
