@@ -31,6 +31,7 @@ class Api::UsersController < ApplicationController
       render json: favourite_restaurants
     else
       render json: {}
+    end
   end
 
   def add_favourite_restaurant
@@ -63,7 +64,7 @@ class Api::UsersController < ApplicationController
     end
   end
 
-private
+  private
 
   def user_params
     params.require(:user).permit(:firstname, :lastname, :username, :email, :password)
