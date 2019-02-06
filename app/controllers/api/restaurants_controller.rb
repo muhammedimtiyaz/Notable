@@ -15,7 +15,6 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def show
-    debugger
     @restaurant = Restaurant.find(params[:id])
     if @restaurant
       render :show

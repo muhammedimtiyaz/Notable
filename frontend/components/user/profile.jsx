@@ -77,7 +77,6 @@ class Profile extends React.Component {
   }
 
   upcomingReservations() {
-    debugger
     const upcoming = [];
     const today = new Date().toJSON();
 

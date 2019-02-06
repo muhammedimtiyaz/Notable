@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class RestaurantIndexItems extends React.Component {
   constructor(props) {
     super(props);
-    debugger
     this.getStar = this.getStar.bind(this);
   }
 

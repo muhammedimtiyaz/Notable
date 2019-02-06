@@ -21,7 +21,6 @@ class RestaurantIndex extends React.Component {
       );
     }
     return this.props.restaurants.map((restaurant, i) => {
-      debugger
       return (
         <RestaurantIndexItem key={i} restaurant={restaurant} />
       );
