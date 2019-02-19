@@ -10,17 +10,13 @@ class Api::RestaurantsController < ApplicationController
       end
     else
       @restaurants = Restaurant.all
-      render :index
     end
+    render :index
   end
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    if @restaurant
-      render :show
-    else
-      render json: ["This restaurant does not exist"]
-    end
+    render :show
   end
 
   def create
@@ -38,7 +34,7 @@ class Api::RestaurantsController < ApplicationController
 
   def restaurant_params
     params.require(:restaurant).permit(
-        # :owner_id,
+        :owner_id,
         :name,
         :address,
         :star,

@@ -1,43 +1,36 @@
 class Api::ReservationsController < ApplicationController
   def index
-    @reservations = current_user.reservations.order(:date)
-    render :index
-  end
+    user = User.find_by(id: params[:userId])
 
-  def show
-    @reservation = Reservation.find_by(id: params[:id])
-    if @reservation
-      render json: @reservation
+    if user
+      @reservations = user.reservations.order(:date)
     else
-      render json: ["No reservation found"], status: 404
-    end
-  end
-
-  def update
-    @reservation = Reservation.find(id: params[:id])
-    if @reservation.update_attributes(reservation_params)
-      render :show, {message: "Your reservation has been updated"}
-    else
-      render json: @reservation.errors.full_messages, status: 422
+      render json: ["User not found"], status: 404
     end
   end
 
   def create
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
-      render :show
+      render "/api/reservations/show"
     else
       render json: @reservation.errors.full_messages, status: 422
     end
   end
 
+  def show
+    @reservation = Reservation.find(params[:id])
+    render :show
+  end
+
   def destroy
-    @reservation = current_user.reservations.where(id: params[:id])
-    if @reservation
-      @reservation.destroy
-      render :index
+    reservation = Reservation.find(params[:id])
+
+    if reservation
+      reservation.destroy
+      render json: reservation
     else
-      render json: ['The reservation does not exist'], status: 404
+      render json: ["Reservation does not exist"], status: 404
     end
   end
 

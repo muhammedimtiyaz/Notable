@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= favicon_link_tag asset_path('OTLogo_rationalizationhor-r1c-01.png'), :rel => 'icon', :type => 'image/png' %>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Notable</title>
+    <%= favicon_link_tag asset_path('OTLogo_rationalizationhor-r1c-01.png'), :rel => 'icon', :type => 'image/png' %>
+
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+
     <%= javascript_include_tag 'application' %>
+    
     <script type="text/javascript">
       window.googleIconURL = "<%= image_url('icons8-google-28.png') %>"
       window.facebookIconURL = "<%= image_url('icons8-facebook-28.png') %>"
@@ -21,7 +30,20 @@
     </script>
   </head>
 
-  <body class="master-container">
+  #class="master-container"
+  <body>
+
+    <% if current_user %>
+      <script>
+        window.currentUser = {
+          "id": <%= current_user.id %>,
+          "firstName": "<%= current_user.first_name %>",
+          "lastName": "<%= current_user.last_name %>",
+          "email": "<%= current_user.email %>"
+        };
+      </script>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

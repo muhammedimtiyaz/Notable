@@ -2,11 +2,12 @@ class Restaurant < ApplicationRecord
   validates :owner_id, :name, :address, :city, :state, :star, :zipcode, :phone_number,
     :open_time, :close_time, :cuisine, :logo, presence: true
 
-  after_initialize :ensure_open_time, :ensure_close_time, :ensure_star
+  after_initialize :ensure_open_time, :ensure_close_time, :ensure_star, :ensure_logo
 
   has_many :reservations
   has_many :reviews
-  has_many :favorites
+  has_many :favourites
+  
   def ensure_logo
     self.logo ||= "https://res.cloudinary.com/chengzii/image/upload/v1523493008/default_restaurant_img.jpg";
   end

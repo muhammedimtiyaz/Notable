@@ -1,6 +1,11 @@
 class Api::FavouritesController < ApplicationController
   def index
-    @favourites = current_user.favourites
+    user = User.find(id: params[:userId])
+      if user
+        @favourites = user.favourites
+      else
+        render json: ["User not found"], status: 404
+      end
   end
 
   def show
@@ -9,7 +14,8 @@ class Api::FavouritesController < ApplicationController
 
   def create
     @favourite = Favourite.new
-    @favourite.user_id, @favourite.restaurant_id = current_user.id, params[:id]
+    @favourite.user_id = current_user.id
+    @favourite.restaurant_id = params[:id]
 
     if @favourite.save
       @restaurant = @favourite.restaurant
@@ -33,7 +39,7 @@ class Api::FavouritesController < ApplicationController
 
   private
 
-  # def favourite_params
-  #   params.require(:favourite).permit(:user_id, :restaurant_id)
-  # end
+  def favourite_params
+    params.require(:favourite).permit(:user_id, :restaurant_id)
+  end
 end

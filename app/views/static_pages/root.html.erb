@@ -1,11 +1,39 @@
-<% if logged_in? %>
-<script id="bootstrap-current-user" type="text/javascript">
-  window.currentUser = <%= render("api/users/user.json.jbuilder",
-    user: current_user).html_safe %>
+<main id="root"></main>
+
+<script>
+  // window.onscroll = function() {
+  //   if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+  //     if(document.getElementById("backToTop")){
+  //       document.getElementById("backToTop").style.display = "block";
+  //     }
+  //   } else {
+  //     if(document.getElementById("backToTop")){
+  //      document.getElementById("backToTop").style.display = "none";
+  //     }
+  //   }
+  // }
+
+  // $('#backToTop').hide();
+  // $(window).scroll(function(){
+  //
+  //   var stop = $('#footer').position().top - $(window).scrollTop();
+  //   var footer = $('#footer').position().top
+  //
+  //   var bottomOfButton = $('#backToTop').position().top + 100;
+  //   var bottom = stop - $('#backToTop').height() + 'px';
+  //
+  //
+  //   if ($(window).scrollTop() > 400 ){
+  //     $('#backToTop').fadeIn();
+  //   } else {
+  //     $('#backToTop').fadeOut();
+  //   };
+
+    // if (stop < bottomofbutton){
+    //     $('#backToTop').css('bottom', 0);
+    // } else if (stop >= bottomofbutton){
+    //     $('#backToTop').css({'bottom': '170px', 'top': ''});
+    // }
+
+  // });
 </script>
-<% end %>
-
-
-<div id="root">
-  
-</div>

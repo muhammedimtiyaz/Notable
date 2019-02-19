@@ -4,19 +4,20 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
 
   has_many :reservations
+
   has_many :favourites
+
   has_many :favorited_restaurants,
     through: :favourites,
     source: :restaurant
-  has_many :owned_restaurants
-  has_many :reviews
 
+  has_many :reviews
 
   attr_reader :password
   after_initialize :ensure_session_token
 
-  def self.find_by_creds(username, password)
-    user = User.find_by(username: username)
+  def self.find_by_creds(email, password)
+    user = User.find_by(email: email)
     user && user.is_password?(password) ? user : nil
   end
 

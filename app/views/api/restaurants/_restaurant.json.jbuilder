@@ -14,7 +14,7 @@ json.extract! restaurant,
 :description,
 :logo
 
-json.ratingArr restaurant.reservations.overall_rating
+json.rating_arr restaurant.rating_arr
 
 json.reservationUserIds restaurant.reservations.pluck(:user_id).uniq
 

@@ -1,5 +1,5 @@
-@favorites.each do |favorite|
-  json.set! favorite.id do
-    json.partial! '/api/favorites/favorite', favorite: favorite
+@favourites.each do |favourite|
+  json.set! favourite.id do
+    json.partial! '/api/favourites/favourite', favourite: favourite
   end
 end
