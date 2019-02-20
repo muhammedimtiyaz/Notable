@@ -4,6 +4,7 @@ class Api::ReservationsController < ApplicationController
 
     if user
       @reservations = user.reservations.order(:date)
+      render :index
     else
       render json: ["User not found"], status: 404
     end
