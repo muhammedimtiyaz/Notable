@@ -10,7 +10,7 @@ import {
 
 import merge from 'lodash/merge';
 
-const restaurantReducer = (state = {}, action) => {
+const RestaurantReducer = (state = {}, action) => {
   let favourite;
   switch (action.type) {
     case RECEIVE_RESTAURANT:
@@ -28,4 +28,4 @@ const restaurantReducer = (state = {}, action) => {
   }
 };
 
-export default restaurantReducer;
+export default RestaurantReducer;

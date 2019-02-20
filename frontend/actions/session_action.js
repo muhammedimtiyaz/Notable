@@ -3,7 +3,7 @@ import * as APIUtil from "../utils/session_util";
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
-export const REMOVE_SESSION_ERRORS = "REMOVE_ERRORS";
+// export const REMOVE_SESSION_ERRORS = "REMOVE_ERRORS";
 
 const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -19,9 +19,9 @@ const receiveErrors = errors => ({
   errors
 });
 
-export const removeErrors = errors => ({
-  type: REMOVE_SESSION_ERRORS,
-});
+// export const removeErrors = errors => ({
+//   type: REMOVE_SESSION_ERRORS,
+// });
 
 export const signup = user => dispatch => (
   APIUtil.signupAjax(user).then(user => (
@@ -40,7 +40,7 @@ export const login = user => dispatch => (
 );
 
 export const logout = () => dispatch => (
-  APIUtil.logoutAjax().then(user => (
+  APIUtil.logoutAjax().then(() => (
     dispatch(logoutCurrentUser())
   ))
 );
