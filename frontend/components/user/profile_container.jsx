@@ -3,7 +3,6 @@ import Profile from "./profile";
 import { connect } from "react-redux";
 import {
   requestUserReservations,
-  updateReservation,
   deleteReservation
 } from '../../actions/reservation_actions';
 
@@ -20,7 +19,6 @@ const msp = state => ({
 
 const mdp = dispatch => ({
   requestUserReservations: (userId) => dispatch(requestUserReservations(userId)),
-  updateReservation: (id) => dispatch(updateReservation(id)),
   deleteReservation: (id) => dispatch(deleteReservation(id)),
   requestUserFavourites: (userId) => dispatch(requestUserFavourites(userId)),
   deleteFavourite: (id) => dispatch(deleteFavourite(id))

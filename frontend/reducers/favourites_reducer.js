@@ -6,7 +6,7 @@ import {
 } from '../actions/favourite_actions';
 
 
-const favouritesReducer = (state = {}, action) => {
+const FavouritesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_FAVOURITES:
@@ -16,7 +16,7 @@ const favouritesReducer = (state = {}, action) => {
       return merge({}, state, { [favourite.id]: favourite });
     case DESTROY_FAVOURITE:
       let newState = merge({}, state);
-      delete newState[action.favouriteId];
+      delete newState[action.favouriteId.id];
       return newState;
     default:
       return state;
@@ -24,4 +24,4 @@ const favouritesReducer = (state = {}, action) => {
 };
 
 
-export default favouritesReducer;
+export default FavouritesReducer;

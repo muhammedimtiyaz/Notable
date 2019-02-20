@@ -14,7 +14,7 @@ const loadingReducer = (state = initialState, action) => {
     case RECEIVE_RESTAURANTS:
       return merge({}, state, { loadingIndex: false });
     case RECEIVE_RESTAURANT_ERRORS:
-      return merge({}, state);
+      return merge({}, state, { loadingShow: false, loadingIndex: false });
     case LOADING_RESTAURANT:
       return merge({}, state, { loadingShow: true });
     case LOADING_RESTAURANTS:
