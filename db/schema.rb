@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_30_223934) do
+ActiveRecord::Schema.define(version: 2019_02_20_134817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_01_30_223934) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
-    t.index ["user_id", "time", "date"], name: "index_reservations_on_user_id_and_time_and_date", unique: true
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -71,7 +71,6 @@ ActiveRecord::Schema.define(version: 2019_01_30_223934) do
     t.integer "service_rating"
     t.integer "ambience_rating"
     t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
-    t.index ["user_id", "restaurant_id"], name: "index_reviews_on_user_id_and_restaurant_id", unique: true
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 

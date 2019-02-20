@@ -1,8 +1,8 @@
-export const createFavourite = favourite => (
+export const createFavourite = id => (
   $.ajax({
     method: 'POST',
     url: '/api/favourites',
-    data: { favourite }
+    data: { id }
   })
 );
 
@@ -26,5 +26,6 @@ export const deleteFavourite = (id) => (
   $.ajax({
     method: 'DELETE',
     url: `/api/favourites/${id}`,
+    data: { id }
   })
 );
