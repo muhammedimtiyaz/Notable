@@ -23,7 +23,7 @@ class ReservationForm extends React.Component {
   update(field) {
     return e =>
       this.setState({
-        [field]: e.Target.value
+        [field]: e.currentTarget.value
       });
   }
 
@@ -111,11 +111,11 @@ class ReservationForm extends React.Component {
 
           <input
             type="date"
+            className="reservation-input  input-2"
             min={minDate}
             value={this.state.date}
             placeholder="YYYY-MM-DD"
             onChange={this.update("date")}
-            className="reservation-input  input-2"
           />
 
           {this.props.currentUser ? (

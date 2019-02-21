@@ -4,7 +4,7 @@ class Api::RestaurantsController < ApplicationController
     if params[:searchTerm]
       @restaurants = Restaurant.find_by_keyword(params[:searchTerm])
       if  @restaurants
-        render json: @restaurants
+        @restaurants
       else
         render json: ["No Restaurants Found"], status: 404
       end

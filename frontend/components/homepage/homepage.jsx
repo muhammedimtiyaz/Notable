@@ -2,7 +2,6 @@ import React from 'react';
 import SearchFormContainer from '../search/search_form_container';
 import FeaturedAreasContainer from '../featured_areas/featured_areas_container';
 import SliderContainer from '../slider/slider_container';
-import Footer from "../footer/footer";
 import { Link } from 'react-router-dom';
 
 

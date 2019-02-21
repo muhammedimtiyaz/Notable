@@ -1433,10 +1433,7 @@ Perhaps the best wine pairing I’ve had.",
 Review.create!(
   user_id: User.first.id,
   restaurant: Restaurant.all.sample,
-  overall_rating: 5,
-  food_rating: 5,
-  service_rating: 5,
-  ambience_rating: 5,
+  rating: 5,
   comment: "Love this place! I've been going for years and always receive great customer service and the sushi is always delicious. It's great bc it's local and fairly priced, so enjoying sushi doesn't always have to be a splurge."
 )
 
@@ -1444,10 +1441,7 @@ Review.create!(
   Review.create(
     user_id: User.all.sample.id,
     restaurant: Restaurant.all.sample,
-    overall_rating: (4..5).to_a.sample,
-    food_rating: (4..5).to_a.sample,
-    service_rating: (4..5).to_a.sample,
-    ambience_rating: (4..5).to_a.sample,
+    rating: (4..5).to_a.sample,
     comment: commentData.sample
   )
 end
@@ -1457,10 +1451,7 @@ end
   Review.create(
     user_id: User.all.sample.id,
     restaurant: Restaurant.all.sample,
-    overall_rating: (3..5).to_a.sample,
-    food_rating: (3..5).to_a.sample,
-    service_rating: (3..5).to_a.sample,
-    ambience_rating: (3..5).to_a.sample,
+    rating: (3..5).to_a.sample,
     comment: commentData.sample
   )
 end
@@ -1470,10 +1461,7 @@ end
   Review.create(
     user_id: User.all.sample.id,
     restaurant: Restaurant.all.sample,
-    overall_rating: (3..5).to_a.sample,
-    food_rating: (3..5).to_a.sample,
-    service_rating: (3..5).to_a.sample,
-    ambience_rating: (3..5).to_a.sample,
+    rating: (3..5).to_a.sample,
     comment: commentData.sample
   )
 end

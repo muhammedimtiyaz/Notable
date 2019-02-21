@@ -69,34 +69,57 @@
   cursor: pointer;
 }
 
-#new_york {
+.new_york {
   background: url("https://components.otstatic.com/components/oc-featured-metros/1.1.3/assets/img/metros/us-new-york-city.jpg") no-repeat;
   background-size: cover;
 }
 
-#los_angeles {
+.los_angeles {
   background: url("https://components.otstatic.com/components/oc-featured-metros/1.1.3/assets/img/metros/us-los-angeles.jpg");
   background-size: cover;
 }
 
-#chicago {
+.chicago {
   background: url("https://components.otstatic.com/components/oc-featured-metros/1.1.3/assets/img/metros/us-chicago.jpg");
   background-size: cover;
 }
 
-#san_francisco {
+.san_francisco {
   background: url("https://components.otstatic.com/components/oc-featured-metros/1.1.3/assets/img/metros/us-san-francisco.jpg");
   background-size: cover;
 }
 
-#washington {
+.washington {
   background: url("https://res.cloudinary.com/chengzii/image/upload/v1523398619/dc_city.jpg");
   background-size: cover;
 }
 
-#seattle {
+.seattle {
   background: url("https://res.cloudinary.com/chengzii/image/upload/v1523398619/seattle_city.jpg");
   background-size: cover;
+}
+
+.featured-locations {
+  width: calc(100% - 20px);
+  column-count: 4;
+  column-gap: 30px;
+  column-width: 25%;
+  color: #333;
+  padding: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.featured-locations ul, li {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #282828;
+  list-style: none;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.featured-locations ul, li:hover {
+  cursor: pointer;
 }
 
 .section-footer {

@@ -48,9 +48,6 @@ export const requestUserFavourites = userId => dispatch => (
     err => dispatch(receiveFavouriteErrors(err.responseJSON)))
 );
 
-
-
-
 export const deleteFavourite = id => dispatch => (
   FavouriteApiUtil.deleteFavourite(id)
     .then(favourite => dispatch(removeFavourite(favourite)),

@@ -5,18 +5,19 @@ import RestaurantIndexItem from "./restaurant_index_items";
 class RestaurantIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.index = this.index.bind(this);
+    this.indexEl = this.indexEl.bind(this);
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
 
-  index() {
+  indexEl() {
     if (this.props.restaurants.length === 0) {
       return (
-        <div className="search-error">
-          <p>NO SEARCH RESULTS FOUND.</p>
+        <div className="restaurant-search-error">
+          <div>NO SEARCH RESULTS FOUND.</div>
+          <p>Try checking your spelling or using less specific keywords.</p>
         </div>
       );
     }
@@ -29,18 +30,18 @@ class RestaurantIndex extends React.Component {
 
   render() {
     return (
-      <div id="main-body">
-        <section className="restaurant-list-image-container">
+      <section id="main-body">
+        <section className="restaurantList-img-container">
         </section>
-        <section className="restaurant-content">
+        <section className="content">
           <div className="search-container">
             <SearchFormContainer />
           </div>
-          <ul className="restaurant-items">
-            {this.index()}
+          <ul className="restaurant-list">
+            {this.indexEl()}
           </ul>
         </section>
-      </div>
+      </section>
     );
   }
 }

@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IconDotCircle, IconCircle } from "react-icons/fa";
-// import IconCircle from "react-icons";
-
-
 
 const Greeting = ({ currentUser, logout, openModal }) => {
   const mainNavWithSessionLinks = () => {

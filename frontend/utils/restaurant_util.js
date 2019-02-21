@@ -20,10 +20,13 @@ export const createRestaurant = (restaurant) => (
   })
 );
 
-export const fetchSearchRestaurants = (searchTerm) => (
-  $.ajax({
-    method: "GET",
-    url: '/api/restaurants',
-    data: { searchTerm },
-  })
-);
+export const fetchSearchRestaurants = (searchTerm) => {
+  debugger
+  return (
+    $.ajax({
+      method: "GET",
+      url: '/api/restaurants',
+      data: { searchTerm },
+    })
+  );
+};

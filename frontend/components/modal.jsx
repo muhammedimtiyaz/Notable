@@ -3,6 +3,7 @@ import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import SignUpFormContainer from './session/signup_container';
 import LogInFormContainer from './session/login_form_container';
+import Loading from "./loading_spinner/loading_spinner";
 
 
 const msp = ({ui}) => ({
@@ -10,7 +11,7 @@ const msp = ({ui}) => ({
 });
 
 const mdp = dispatch => ({
-  clodeModal: () => dispatch(clodeModal()),
+  closeModal: () => dispatch(closeModal()),
 });
 
 function Modal ({modal, closeModal}) {
@@ -25,6 +26,9 @@ function Modal ({modal, closeModal}) {
       break;
     case 'signup':
       component = <SignUpFormContainer />;
+      break;
+    case "loading":
+      component = <Loading />;
       break;
     default:
       return null;

@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createReservation, receiveReservationErrors } from "../../actions/reservation_actions"
+import { createReservation, receiveReservationErrors } from "../../actions/reservation_actions";
 import ReservationForm from "./reservation_form";
 
-const msp = state => ({
-  currentUser: state.session.currentUser,
-  restaurants: state.entities.restaurants,
-  errors: state.errors.reservation
+const msp = ({entities, session, errors}) => ({
+  currentUser: session.currentUser,
+  restaurants: entities.restaurants,
+  errors: errors.reservation
 });
 
 const mdp = dispatch => ({

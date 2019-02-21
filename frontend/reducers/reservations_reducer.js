@@ -1,4 +1,4 @@
-import { RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION } from "../actions/reservation_actions";
+import { RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION, RECEIVE_RESERVATION_ERRORS } from "../actions/reservation_actions";
 import { merge } from "lodash";
 
 export default (state = {}, action) => {

@@ -20,7 +20,7 @@ class CreateRestaurant extends React.Component {
 
   update(field) {
     return e => this.setState({
-      [field]: e.Target.value
+      [field]: e.currentTarget.value
     });
   }
 
@@ -35,7 +35,6 @@ class CreateRestaurant extends React.Component {
         this.props.history.push(`/restaurants/${response.restaurant.id}`);
       }
     );
-
   }
 
   renderErrors() {
@@ -129,7 +128,6 @@ class CreateRestaurant extends React.Component {
             </button>
           </div>
         </form>
-
       </div>
     );
   }

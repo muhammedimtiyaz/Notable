@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_20_134817) do
+ActiveRecord::Schema.define(version: 2019_02_21_052022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,10 +66,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_134817) do
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "overall_rating"
-    t.integer "food_rating"
-    t.integer "service_rating"
-    t.integer "ambience_rating"
+    t.integer "rating"
     t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end

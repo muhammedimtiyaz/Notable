@@ -1,13 +1,15 @@
 import React from "react";
-import RestaurantIndex from "./restaurant_index";
 import { connect } from "react-redux";
+import RestaurantIndex from "./restaurant_index";
 import { requestAllRestaurants, requestRestaurant } from "../../actions/restaurant_actions";
 
-const msp = state => ({
-  currentUser: state.session.currentUser,
-  restaurants: Object.values(state.entities.restaurants),
-  loading: state.ui.loading.loadingIndex,
-});
+const msp = state => {
+  return {
+    currentUser: state.session.currentUser,
+    restaurants: Object.values(state.entities.restaurants),
+    loading: state.ui.loading.loadingIndex,
+  };
+};
 
 const mdp = dispatch => ({
   requestAllRestaurants: () => dispatch(requestAllRestaurants()),

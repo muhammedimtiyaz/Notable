@@ -3,13 +3,13 @@ import { Route, withRouter } from 'react-router-dom';
 import ReservationFormContainer from '../reservation/reservation_form_container';
 import ReviewFormContainer from '../review/review_form_container';
 import ReviewIndexContainer from '../review/review_index_container';
-import LoadingSpinner from "../loading_spinner";
+import LoadingSpinner from "../loading_spinner/loading_spinner";
 
 
 class RestaurantDetail extends React.Component {
   constructor(props) {
     super(props);
-    this.scrollToElement = this.scrollToElement.bind(this);
+    this.scrollTo = this.scrollTo.bind(this);
     this.getAveRating = this.getAveRating.bind(this);
     this.deleteFavourite = this.deleteFavourite.bind(this);
     this.createFavourite = this.createFavourite.bind(this);
@@ -21,7 +21,7 @@ class RestaurantDetail extends React.Component {
     this.props.requestRestaurant(this.props.match.params.restaurantId);
   }
 
-  scrollToElement(el) {
+  scrollTo(el) {
     el.scrollIntoView({ behavior: 'smooth' });
   }
 
@@ -44,7 +44,7 @@ class RestaurantDetail extends React.Component {
   }
 
 
-  reviewFromChecker() {
+  reviewFormChecker() {
     if (this.props.loading) return <LoadingSpinner />;
 
     if(!this.props.currentUser) { return null; }
@@ -59,7 +59,7 @@ class RestaurantDetail extends React.Component {
     } else {
       return (
         <div className="review-form-container review-form-message">
-          <p>Reviews can only be made by diners who have eaten at this restaurant</p>
+          <p>Reviews can only be made by diners who have dined at this restaurant. Please make a reservation. </p>
         </div>
       );
     }
@@ -113,7 +113,7 @@ class RestaurantDetail extends React.Component {
 
     for (let idx = 0; idx < starCount; idx++) {
       stars.push(
-        <i key={idx} class="fa fa-star" aria-hidden="true"></i>
+        <i key={idx} className="fa fa-star" aria-hidden="true"></i>
       );
     }
     return stars;
@@ -122,15 +122,15 @@ class RestaurantDetail extends React.Component {
   getAveRating(){
     const restaurant = this.props.restaurant;
     let sum = 0;
-    for (var i = 0; i < restaurant.ratingArr.length; i++) {
-      sum += restaurant.ratingArr[i];
+    for (var i = 0; i < restaurant.rating_arr.length; i++) {
+      sum += restaurant.rating_arr[i];
     }
 
     let aveRating;
     if (sum === 0) {
       aveRating = "No rating yet!";
     } else {
-      aveRating = (Math.round(sum / restaurant.ratingArr.length * 10) / 10).toFixed(1);
+      aveRating = (Math.round(sum / restaurant.rating_arr.length * 10) / 10).toFixed(1);
     }
 
     return aveRating;
@@ -139,28 +139,34 @@ class RestaurantDetail extends React.Component {
   getRate() {
     const restaurant = this.props.restaurant;
     let sum = 0;
-    for (var i = 0; i < restaurant.ratingArr.length; i++) {
-      sum += restaurant.ratingArr[i];
+    for (var i = 0; i < restaurant.rating_arr.length; i++) {
+      sum += restaurant.rating_arr[i];
     }
 
     let aveRating;
     if (sum === 0) {
       aveRating = 0;
     } else {
-      aveRating = Math.floor((sum / restaurant.ratingArr.length * 10) / 10);
+      aveRating = Math.floor((sum / restaurant.rating_arr.length * 10) / 10);
     }
 
     const rateArr = [];
 
     for (var idx = 0; idx < aveRating; idx++) {
       rateArr.push (
-        <i key={idx} class="fa fa-star" aria-hidden="true"></i>
+        <img
+          key={idx}
+          src="https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523511580/rating_icon_full.png"
+          />
       );
     }
 
     for (var idx = aveRating; idx < 5 ; idx++) {
       rateArr.push (
-        <i key={idx} class="fa fa-star-o" aria-hidden="true"></i>
+        <img
+          key={idx}
+          src="https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523511580/rating_icon_empty.png"
+          />
       );
     }
     return rateArr;
@@ -168,9 +174,9 @@ class RestaurantDetail extends React.Component {
 
 
   render() {
-    if (this.props.loading) return <LoadingSpinner />;
+    if (this.props.loading) { return <LoadingSpinner />; }
 
-    if (!this.props.restaurant) return null;
+    if (!this.props.restaurant) { return null; }
     const restaurant = this.props.restaurant;
 
     return (
@@ -206,7 +212,7 @@ class RestaurantDetail extends React.Component {
             <div className='restaurant-showpage-main'>
               <div ref={ el => { this.aboutSection = el;} } className='restaurant-content-about' id='about'>
                     <p className="restaurant-description">{restaurant.description}</p>
-                    <p>Cusines: {restaurant.cuisine}</p>
+                    <p>Cuisines: {restaurant.cuisine}</p>
                     <p>Phone number: {restaurant.phoneNumber}</p>
                     <p>Hours of operation: {restaurant.openTime} - {restaurant.closeTime}</p>
                     <p>Address: {restaurant.address}, {restaurant.city}, {restaurant.state} {restaurant.zipcode}</p>
@@ -216,7 +222,7 @@ class RestaurantDetail extends React.Component {
                 ref={ el => { this.reviewsSection = el;} }
                 className='restaurant-reviews'
                 name='reviews'>
-                  <h5>What {this.props.restaurant.ratingArr.length} People Are Saying</h5>
+                  <h5>What {this.props.restaurant.rating_arr.length} People Are Saying</h5>
                   <Route path={'/restaurants/:restaurantId'}
                     component={ReviewIndexContainer} />
               </div>
@@ -225,7 +231,7 @@ class RestaurantDetail extends React.Component {
                 ref={ el => { this.writeReviewsSection = el;} }
                 className='restaurant-reviews'
                 name='writeReviews'>
-                {this.reviewFromChecker()}
+                {this.reviewFormChecker()}
               </div>
 
             </div>
