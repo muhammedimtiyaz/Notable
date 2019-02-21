@@ -110,13 +110,14 @@ class LoginForm extends React.Component {
               required/>
             <button id="login-button" className="login-button" onClick={() => this.props.removeErrors()}>Sign In</button>
           </form>
-            <div className="demo-user-button">
-              <form onSubmit={this.handleDemo}>
-                <input required type="submit" value="Demo Login" onClick={this.demologin}/>
+            <div className="demo-login-div">
+              <form className="demo-login-form" onSubmit={this.handleDemo}>
+                <input className="demo-user-button" required type="submit" value="Demo Login" onClick={this.demologin}/>
               </form>
             </div>
             <hr></hr>
             <p>Don't want to complete the form?</p>
+            <br />
             <div className="social-buttons">
                 <button className="facebook-google-button">
                 <img className="facebook-google-icon" src={window.facebookIconURL} />

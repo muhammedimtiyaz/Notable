@@ -21,7 +21,7 @@ class RestaurantIndexItem extends React.Component {
 
     return (
       <Link to={`/restaurants/${this.props.restaurant.id}`}>
-        <li className="restaurant-list-container">
+        <li className="restaurant-list-section">
           <div className="restaurant-logo-container">
             <img
               className="restaurant-logo"
