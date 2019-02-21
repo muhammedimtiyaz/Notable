@@ -8,7 +8,6 @@ class Profile extends React.Component {
     this.upcomingReservations = this.upcomingReservations.bind(this);
     this.passedReservations = this.passedReservations.bind(this);
     this.favouriteRestaurants = this.favouriteRestaurants.bind(this);
-
     this.deleteReservation = this.deleteReservation.bind(this);
   }
 
@@ -20,9 +19,8 @@ class Profile extends React.Component {
 
   deleteReservation(id){
     return (e) => {
-     e.preventDefault();
-
-     this.props.deleteReservation(id);
+      e.preventDefault();
+      this.props.deleteReservation(id);
     };
   }
 
@@ -36,8 +34,8 @@ class Profile extends React.Component {
     };
   }
 
-  getStar(reservation){
-    let starCount = reservation.restaurant.star;
+  getStar(res){
+    let starCount = res.restaurant.star;
     const stars = [];
 
     for (let idx = 0; idx < starCount; idx++) {
@@ -45,6 +43,7 @@ class Profile extends React.Component {
         <i key={idx} className="fa fa-star" aria-hidden="true"></i>
       );
     }
+
     return stars;
   }
 
@@ -244,7 +243,6 @@ class Profile extends React.Component {
         </div>
       );
     }
-
   }
 
   render() {
@@ -304,8 +302,8 @@ class Profile extends React.Component {
 
 
             <div className='user-profile-section'>
-              <div className='user-profile-content-title' name='favorite'
-                  ref={ el => this.favoriteSection = el }>
+              <div className='user-profile-content-title' name='favourite'
+                  ref={ el => this.favouriteSection = el }>
                   <h2>Favourite Restaurants
                     <span className="user-reservation-count">
                       {Object.keys(this.props.favourites).length}

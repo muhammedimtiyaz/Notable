@@ -1,11 +1,7 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import {
   Route,
-  Redirect,
   Switch,
-  Link,
-  HashRouter
 } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
@@ -15,7 +11,7 @@ import CreateRestaurant from "./restaurant/create_restaurant_container";
 import RestaurantDetailContainer from "./restaurant/restaurant_detail_container";
 import UserProfileContainer from "./user/profile_container";
 import Homepage from "./homepage/homepage";
-import { AuthRoute, ProtectedRoute } from '../utils/route_util';
+import { ProtectedRoute } from '../utils/route_util';
 import Modal from "./modal";
 
 const App = () => (

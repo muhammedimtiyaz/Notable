@@ -1,15 +1,8 @@
 import React from "react";
-import Profile from "./profile";
 import { connect } from "react-redux";
-import {
-  requestUserReservations,
-  deleteReservation
-} from '../../actions/reservation_actions';
-
-import {
-  requestUserFavourites,
-  deleteFavourite
-} from '../../actions/favourite_actions';
+import Profile from "./profile";
+import { requestUserReservations, deleteReservation } from '../../actions/reservation_actions';
+import { requestUserFavourites, deleteFavourite } from '../../actions/favourite_actions';
 
 const msp = state => ({
   currentUser: state.session.currentUser,
