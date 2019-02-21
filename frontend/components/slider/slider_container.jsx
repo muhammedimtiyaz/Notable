@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { searchRestaurants } from '../../actions/restaurant_actions';
-
-
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 import LinkSlider from './slider';

@@ -1,13 +1,13 @@
-/* .slider-container {
+.slider-container {
   display: flex;
   justify-content: center;
   flex-direction: row;
   margin: 20px 0 17px 0;
   border-radius: 3px;
   height: 240px;
- }
- 
- .slider {
+}
+
+.slider {
   height: 240px;
   width: 100px;
   outline: none;
@@ -18,155 +18,100 @@
   text-shadow: 1px 1px 1px #000;
   background-color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
- } */
- /*
- .slider:hover {
-   opacity: 0.8;
- }
- 
- .slider p:first-of-type {
-   padding-top: 100px;
- }
+}
 
- .slider.one {
+.slider:hover {
+  opacity: 0.8;
+}
+
+.slider p:first-of-type {
+  padding-top: 100px;
+}
+
+.slider.one {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/8AFC7ADC-DE3B-439D-91F2-CE568C1A653B.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
+}
 
- .slider.two {
+.slider.two {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/48E9D049-40CF-4CB9-98D9-8C47D0D58986.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
+}
 
- .slider.three {
+.slider.three {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/029CD931-4A83-4572-B87A-2B0CE7ABCB1E.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
- 
- .slider.four {
+}
+
+.slider.four {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/2B0938A7-B430-48B2-BF04-045BBE6C3BB2.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
- 
- .slider.five {
+}
+
+.slider.five {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/0735C10C-6AB6-46F6-87AA-8FE54397744D.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
- 
- .slider.six {
+}
+
+.slider.six {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/7BF54B86-BD1F-4E35-BBCA-F7CCE982B4ED.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
- 
- .slider.seven {
+}
+
+.slider.seven {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/6C913B35-FFD3-498C-93F0-A3E7086EBE25.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
+}
 
- .slider.eight {
+.slider.eight {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/5050D255-C8C4-40BD-BF56-5C35108FE9C1.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
- 
- .slider.nine {
+}
+
+.slider.nine {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/73289F47-FE6D-4B16-94EA-F24DC1FDFC26.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
+}
 
- .slider.ten {
+.slider.ten {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/71C5B1FC-DC2A-4DFF-BF31-F4E7B8E956A0.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
+}
 
- .slider.eleven {
+.slider.eleven {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/3E5CDB19-550F-47FB-8AFD-E68C24460F31.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
+}
 
- .slider.twelve {
+.slider.twelve {
   background-image: url("https://cdn.otstatic.com/start-page-rush-654/4822ABB0-DF77-4D30-8C47-74809DDBAECB.jpg");
   background-size: 98% 240px;
   background-position: center;
   background-repeat: no-repeat;
- }
+}
 
- */
- 
- /* .featured-cuisines-photo {
-   height: 224px;
-   width: 208px;
-   position: relative;
-   opacity: 0.95;
-   filter: alpha(opacity=95);
-   margin-top: 30px;
-   margin-left: 20px;
-  }
-  
-  .featured-cuisines-area {
-    top: 50%;
-    left: 50%;
-    color: white;
-    font-size: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    // text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;
-  }
-  
-  .slick-next:before, .slick-prev:before {
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;
-  } */
-  
-  
-  .slide-container {
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-  }
-
-  .featured-cuisines {
-    width: 200px;
-    height: 100px;
-  }
-
-  .featured-cuisine-photo {
-    width: 300px;
-    height: 400px;
-  }
-
-  .cuisines {
-    display: block;
-    padding-bottom: 20px;
-    width: 890px;
-  }
-
-  .food-photo {
-    /* width: 100%;
-    height: 100%; */
-  }
+.cuisines {
+  padding-bottom: 20px;
+}
