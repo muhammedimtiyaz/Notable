@@ -54,7 +54,7 @@ class Signup extends React.Component {
     return (
       <div id="signup" className="modal">
         <div className="modal-signup-form">
-        <h2>Welcome to NoTable!</h2>
+        <h2 className="signup-header">Welcome to NoTable!</h2>
         <span className="close" onClick={this.closeAndRemoveErrors}>&times;</span>
         <hr/>
         {this.renderErrors()}
@@ -115,6 +115,7 @@ class Signup extends React.Component {
           <button className="signup-button" onClick={() => this.props.removeErrors()}>Create Account</button>
           <hr/>
           <p>Don't want to complete the form?</p>
+          <br />
           <div className="social-buttons">
             <button className="facebook-google-button">
               <img className="facebook-google-icon" src={window.facebookIconURL} />

@@ -88,7 +88,7 @@ class LoginForm extends React.Component {
     return (
       <div id="modal-login" className="modal">
         <div className="modal-login-form">
-          <h2>Please sign in</h2>
+          <h2 className="login-header">Please sign in</h2>
           <span className="close" onClick={this.closeAndRemoveErrors}>&times;</span>
           <hr></hr>
           <br/>

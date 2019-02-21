@@ -11,16 +11,23 @@
   height: 100%;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
+  overflow: hidden;
 }
 
 .modal-signup-form {
   background-color: white;
   box-sizing: border-box;
   width: 465px;
-  height: 860px;
+  height: 100%;
   padding: 0 27px 27px 27px;
   padding-top: 15px;
   margin-top: 15px;
+}
+
+.signup-header {
+  margin-top: 5%;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
 }
 
 hr {
@@ -64,7 +71,7 @@ hr {
 
 .signup-input {
   width: 400px;
-  height: 54px;
+  height: 45px;
   padding: 16px;
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 3px;
