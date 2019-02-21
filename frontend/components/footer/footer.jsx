@@ -16,6 +16,8 @@ const Footer = () => {
           <br />
           <a href="https://www.linkedin.com/in/muhammed-imtiyaz/" target="_blank"><i className="fab fa-linkedin"></i><p>LinkedIn</p></a>
           <br />
+          <a href="https://angel.co/muhammed-imtiyaz"><i className="fab fa-angellist" target="_blank"></i><p>Angel List</p></a>
+          <br />
           <a href="http://muhammed-imtiyaz.com/"><i className="fas fa-user user-icon" target="_blank"></i><p>About Me</p></a>
         </div>
 
