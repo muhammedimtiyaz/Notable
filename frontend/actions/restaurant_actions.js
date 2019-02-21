@@ -53,6 +53,5 @@ export const createRestaurant = (restaurant) => {
 };
 
 export const searchRestaurants = searchTerm => dispatch => {
-  debugger
   return RestaurantApiUtil.fetchSearchRestaurants(searchTerm).then(response => dispatch(receiveRestaurants(response)), err => dispatch(receiveRestaurantErrors(err.responseJSON)));
 };

@@ -52,9 +52,9 @@ class ReservationForm extends React.Component {
 
   timePicker() {
     let timeSlotsArr = [];
-    let openTime = this.props.restaurants[this.state.restaurant_id].openTime;
+    let openTime = this.props.restaurants[this.state.restaurant_id].open_time;
     openTime = parseInt(openTime.split(":")[0]);
-    let closeTime = this.props.restaurants[this.state.restaurant_id].closeTime;
+    let closeTime = this.props.restaurants[this.state.restaurant_id].close_time;
     closeTime = parseInt(closeTime.split(":")[0]);
 
     for (let i = openTime; i < closeTime; i++) {

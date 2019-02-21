@@ -69,10 +69,10 @@ class ReviewForm extends React.Component {
           key={idx}
           className="fa fa-star"
           id={id}
-          onMouseEnter={this.handleHover(i)}
+          onMouseEnter={this.handleHover(idx)}
           onMouseLeave={this.handleHoverLeave}
           aria-hidden="true"
-          onClick={this.updateRating(i)}>
+          onClick={this.updateRating(idx)}>
         </i>
       );
     }

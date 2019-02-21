@@ -39,7 +39,7 @@ class ReviewIndexItem extends React.Component {
 
   render() {
     const review = this.props.review;
-    let createdAt = review.createdAt.slice(0, 10);
+    let createdAt = review.created_at.slice(0, 10);
     if (!this.props.currentUser) {
       return (
         <li className="review-li">

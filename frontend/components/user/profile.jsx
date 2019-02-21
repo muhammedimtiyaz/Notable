@@ -34,20 +34,6 @@ class Profile extends React.Component {
     };
   }
 
-  getStar(res){
-    let starCount = res.restaurant.star;
-    const stars = [];
-
-    for (let idx = 0; idx < starCount; idx++) {
-      stars.push(
-        <i key={idx} className="fa fa-star" aria-hidden="true"></i>
-      );
-    }
-
-    return stars;
-  }
-
-
   getUpcomingCount() {
     const upcomingReservationCount = [];
     const today = new Date().toJSON();
@@ -101,7 +87,6 @@ class Profile extends React.Component {
                 to={`/restaurants/${res.restaurant.id}`}
                 className="restaurant-name">
                   {res.restaurant.name}
-                <span className="restaurant-star">{this.getStar(res)}</span>
               </Link>
 
 
@@ -162,7 +147,6 @@ class Profile extends React.Component {
                 to={`/restaurants/${res.restaurant.id}`}
                 className="restaurant-name">
                   {res.restaurant.name}
-                <span className="restaurant-star">{this.getStar(res)}</span>
               </Link>
               <div>
                 {res.date}

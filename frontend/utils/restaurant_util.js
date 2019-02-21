@@ -21,7 +21,6 @@ export const createRestaurant = (restaurant) => (
 );
 
 export const fetchSearchRestaurants = (searchTerm) => {
-  debugger
   return (
     $.ajax({
       method: "GET",

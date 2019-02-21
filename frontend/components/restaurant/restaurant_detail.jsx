@@ -105,20 +105,6 @@ class RestaurantDetail extends React.Component {
     };
   }
 
-
-
-  getStar() {
-    let starCount = this.props.restaurant.star;
-    const stars = [];
-
-    for (let idx = 0; idx < starCount; idx++) {
-      stars.push(
-        <i key={idx} className="fa fa-star" aria-hidden="true"></i>
-      );
-    }
-    return stars;
-  }
-
   getAveRating(){
     const restaurant = this.props.restaurant;
     let sum = 0;
@@ -197,7 +183,6 @@ class RestaurantDetail extends React.Component {
             <section className='restaurant-nav-info'>
               <div className='restaurant-nav-name'>
                 <h1>{restaurant.name}</h1>
-                <span className="restaurant-star">{this.getStar()}</span>
               </div>
               <div className='restaurant-nav-detail'>
                 <span>{this.getRate()}</span>
@@ -213,8 +198,8 @@ class RestaurantDetail extends React.Component {
               <div ref={ el => { this.aboutSection = el;} } className='restaurant-content-about' id='about'>
                     <p className="restaurant-description">{restaurant.description}</p>
                     <p>Cuisines: {restaurant.cuisine}</p>
-                    <p>Phone number: {restaurant.phoneNumber}</p>
-                    <p>Hours of operation: {restaurant.openTime} - {restaurant.closeTime}</p>
+                    <p>Phone number: {restaurant.phone_number}</p>
+                    <p>Hours of operation: {restaurant.open_time} - {restaurant.close_time}</p>
                     <p>Address: {restaurant.address}, {restaurant.city}, {restaurant.state} {restaurant.zipcode}</p>
               </div>
 
