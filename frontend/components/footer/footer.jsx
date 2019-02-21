@@ -12,9 +12,11 @@ const Footer = () => {
         <div className="footer-links">
           <p>Muhammed Imtiyaz</p>
           <br />
-          <a href="https://github.com/muhammedimtiyaz" target="_blank"><img src={window.githubURL} />Github</a>
+          <a href="https://github.com/muhammedimtiyaz" target="_blank"><i className="fab fa-github"></i><p>Github</p></a>
           <br />
-          <a href="https://www.linkedin.com/in/muhammed-imtiyaz/" target="_blank"><img src={window.linkedinURL} />LinkedIn</a>
+          <a href="https://www.linkedin.com/in/muhammed-imtiyaz/" target="_blank"><i className="fab fa-linkedin"></i><p>LinkedIn</p></a>
+          <br />
+          <a href="http://muhammed-imtiyaz.com/"><i className="fas fa-user user-icon" target="_blank"></i><p>About Me</p></a>
         </div>
 
       </div>

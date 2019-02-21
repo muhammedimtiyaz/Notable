@@ -106,7 +106,7 @@ class Profile extends React.Component {
 
               <button type="button"
                       onClick={this.deleteReservation(res.id)}
-                      className="btn btn-demo reservation-btn">
+                      className="reservation-delete-btn">
                       Cancel
               </button>
             </div>

@@ -33,7 +33,6 @@
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 20px;
-  // border-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   margin-right: 20px;
@@ -50,7 +49,6 @@
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
 }
-
 
 .page-nav-link{
   padding: 6px 0;
@@ -83,16 +81,6 @@
   top: -10px;
 }
 
-// .restaurant-nav-favorite {
-//   position: absolute;
-//   right: 0;
-//   bottom: 70px;
-//   height: 30px;
-//   line-height: 30px;
-//   padding: 0 8px;
-//   border-radius: 3px;
-// }
-
 .restaurant-nav-detail {
   display: flex;
   border-top: 1px solid #ccc;
@@ -101,17 +89,12 @@
   align-items: center;
 }
 
-
-
 .restaurant-nav-detail div {
   padding-right: 20px;
 }
 
 .restaurant-nav-detail div i {
   padding-right: 3px;
-}
-
-.rating_icon {
 }
 
 .restaurant-content-about {
@@ -126,8 +109,6 @@
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
-
-
 
 .restaurant-reservation {
   background: #fff;
@@ -148,7 +129,6 @@
   background: #fff;
   position: sticky;
   top: 270px;
-  // border-radius: 3px;
 }
 
 .favorite-btn i {

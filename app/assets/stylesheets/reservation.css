@@ -1,6 +1,5 @@
 .reservation-show {
   border: 1px solid #ccc;
-  // border-radius: 3px;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   padding: 4px 20px;
@@ -13,8 +12,6 @@
   text-align: center;
   padding: 11px 0;
 }
-
-
 
 .reservation-input {
   height: 42px;

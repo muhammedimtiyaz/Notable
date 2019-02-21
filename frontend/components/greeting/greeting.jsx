@@ -32,7 +32,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         </Link>
         <div className="right-nav">
           <div className="dropdown">
-            <button className="dropbtn">Hi, {currentUser.username}<i className="fa fa-angle-down" aria-hidden="true"></i>
+            <button className="dropbtn">Hi, {currentUser.firstName}<i className="fa fa-angle-down" aria-hidden="true"></i>
             </button>
             <div className="dropdown-content">
               <Link className="dropdown-content-link" to={`/users/${currentUser.id}`}>My Profile</Link>

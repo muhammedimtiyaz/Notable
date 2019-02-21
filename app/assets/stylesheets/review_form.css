@@ -12,15 +12,6 @@
   padding-bottom: 10px;
 }
 
-
-
-.review-radio {
-  width: 100%;
-  text-align: center;
-  padding: 8px 0;
-}
-
-
 .review-form-middle {
   margin-top: 10px;
   width: 100%;
@@ -34,10 +25,6 @@
   padding: 10px
 }
 
-.stars input[type="radio"] {
-  // visibility:hidden;
-}
-
 .star {
   padding-right: 10px;
   padding-left: 2px;
@@ -49,6 +36,7 @@
   padding-top: 8px;
   font-size: 18px;
 }
+
 #full {
   color: #ffe500;
 }

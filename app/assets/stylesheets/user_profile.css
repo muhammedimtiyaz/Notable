@@ -1,11 +1,9 @@
 .user-profile {
   height: 80px;
   background: #fff;
-
   font-size: 30px;
   line-height: 80px;
   padding-left: 40px;
-
 }
 
 .user-profile-body {
@@ -68,9 +66,7 @@
   border-radius: 15px;
   color: #fff;
   background-color: #ccc;
-
 }
-
 
 .reservation-list {
   display: flex;
@@ -78,7 +74,6 @@
   border-bottom: 1px solid #ccc;
   position: relative;
 }
-
 
 .reservation-list:last-of-type {
   border-bottom: none;
@@ -88,7 +83,6 @@
   color: #DA3743;
   padding: 4px 0;
 }
-
 
 .restaurant-detail-container div i {
   padding-right: 2px;
@@ -118,7 +112,6 @@
   right: 0;
   bottom: 20px;
 }
-
 
 .no-reservation {
   padding: 10px 0 10px 24px;
