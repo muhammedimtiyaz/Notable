@@ -11,8 +11,8 @@ class ReviewIndex extends React.Component {
   }
 
   render() {
-    if (this.props.reviews.length === 0) { return null; }
-    const allReviews = this.props.reviews.map((review, i) => (
+    if (Object.keys(this.props.reviews).length === 0) { return null; }
+    const allReviews = Object.values(this.props.reviews).map((review, i) => (
       <ReviewIndexItem 
         key={i} 
         review={review}

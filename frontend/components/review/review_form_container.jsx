@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import { createReview, receiveReviewErrors } from "../../actions/review_actions";
 import ReviewForm from "./review_form";
 
@@ -14,4 +13,4 @@ const mdp = dispatch => ({
   removeErrors: () => dispatch(receiveReviewErrors([])),
 });
 
-export default withRouter(connect(msp, mdp)(ReviewForm));
+export default connect(msp, mdp)(ReviewForm);

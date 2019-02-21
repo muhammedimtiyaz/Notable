@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { signup, removeErrors } from "../../actions/session_action";
+import { signup, receiveErrors } from "../../actions/session_action";
 import { closeModal } from "../../actions/modal_actions";
-import { Link } from 'react-router-dom';
 import Signup from "./signup_form";
 
 const msp = ({ errors }) => {
@@ -15,7 +14,7 @@ const msp = ({ errors }) => {
 const mdp = dispatch => {
   return {
     createNewUser: (formUser) => dispatch(signup(formUser)),
-    removeErrors: () => dispatch(removeErrors()),
+    removeErrors: () => dispatch(receiveErrors([])),
     closeModal: () => dispatch(closeModal()),
   };
 };

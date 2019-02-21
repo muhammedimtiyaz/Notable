@@ -16,13 +16,13 @@ class ReviewForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  componentWillUnmount() {
+  componentDidMount() {
     this.props.removeErrors();
   }
 
   update(field) {
     return e => {
-      this.setState({ [field]: e.target.value});
+      this.setState({ [field]: e.currentTarget.value});
     };
   }
 
@@ -31,12 +31,13 @@ class ReviewForm extends React.Component {
     if (!this.props.currentUser) {
       alert("You must be logged in to leave review");
     } else {
-      this.setState({ user_id: this.props.currentUser.id })
+      this.setState({ user_id: this.props.currentUser.id });
     }
 
     this.props.createReview(this.state).then(() => (this.setState({ 
       user_id: "",
       restaurant_id: this.props.match.params.restaurantId,
+      rating: "",
       comment: ""
       })
     ));
@@ -55,13 +56,13 @@ class ReviewForm extends React.Component {
   }
 
   ratingStars() {
-    const starArr = [];
+    let starArr = [];
 
-    for (let idx = 0; idx < 6; idx++) {
+    for (let idx = 1; idx < 6; idx++) {
       let id, maxRating;
       maxRating = this.state.hover ? this.state.hoverV : this.state.rating;
   
-      if (i <= maxRating) { id = "full"; }
+      if (idx <= maxRating) { id = "full"; }
       
       starArr.push(
         <i
@@ -80,6 +81,7 @@ class ReviewForm extends React.Component {
   }
 
   renderErrors() {
+    if (this.props.errors == []) { return null; }
     return (
       <ul className="error-ul">
         {this.props.errors.map((err, i) => (

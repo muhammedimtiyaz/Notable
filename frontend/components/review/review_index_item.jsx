@@ -8,21 +8,26 @@ class ReviewIndexItem extends React.Component {
   getRate() {
     let rating = this.props.review.rating;
 
-    const ratingArr = [];
+    const rateArr = [];
 
     for (var idx = 0; idx < rating; idx++) {
-      ratingArr.push(
-        <i key={idx} class="fa fa-star" aria-hidden="true"></i>
+      rateArr.push(
+        <img
+          key={idx}
+          src="https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523511580/rating_icon_full.png"
+        />
       );
     }
 
     for (var idx = rating; idx < 5; idx++) {
-      ratingArr.push(
-        <i key={idx} class="fa fa-star-o" aria-hidden="true"></i>
-
+      rateArr.push(
+        <img
+          key={idx}
+          src="https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523511580/rating_icon_empty.png"
+        />
       );
     }
-    return ratingArr;
+    return rateArr;
   }
 
   deleteReview(id) {

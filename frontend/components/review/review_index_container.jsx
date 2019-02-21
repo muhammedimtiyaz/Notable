@@ -5,9 +5,9 @@ import { requestRestaurantReviews, deleteReview } from "../../actions/review_act
 
 const msp = (state, ownProps) => ({
   currentUser: state.session.currenUser,
-  reviews: Object.values(state.entities.reviews),
+  reviews: state.entities.reviews,
   restaurantId: ownProps.match.params.restaurantId,
-  restaurant: this.state.restaurants[ownProps.match.params.restaurantId],
+  restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
 });
 
 const mdp = dispatch => ({

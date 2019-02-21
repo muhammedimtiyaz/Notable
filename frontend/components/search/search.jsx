@@ -25,7 +25,7 @@ class SearchForm extends React.Component {
       .then(() => this.props.closeModal()
       ).then(() =>
         this.setState({
-          searchTerms: ''
+          searchTerm: ''
         })
       ).then(() => this.props.history.push("/restaurants"));
   }

@@ -1,7 +1,6 @@
-import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { login, removeErrors } from '../../actions/session_action';
+import { connect } from 'react-redux';
+import { login, receiveErrors } from '../../actions/session_action';
 import { openModal, closeModal } from "../../actions/modal_actions";
 import LoginForm from './login_form';
 
@@ -15,7 +14,7 @@ const mapStateToProps = ({ errors }) => {
 const mapDispatchToProps = dispatch => {
   return {
     login: (user) => dispatch(login(user)),
-    removeErrors: () => dispatch(removeErrors()),
+    removeErrors: () => dispatch(receiveErrors([])),
     closeModal: () => dispatch(closeModal()),
     signupForm: (
       <a href="#" onClick={() => dispatch(openModal('signup'))}>Create an Account</a>
