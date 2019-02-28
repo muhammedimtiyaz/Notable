@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_many :favourites
 
-  has_many :favorited_restaurants,
+  has_many :favourited_restaurants,
     through: :favourites,
     source: :restaurant
 

@@ -4,7 +4,11 @@ import RestaurantIndexItem from "./restaurant_index_items";
 
 class RestaurantIndex extends React.Component {
   constructor(props) {
+    // debugger
     super(props);
+    this.state = {
+      searchTerm: this.props.location.search.substr(1),
+    }
     this.indexEl = this.indexEl.bind(this);
   }
 
@@ -35,7 +39,7 @@ class RestaurantIndex extends React.Component {
         </section>
         <section className="content">
           <div className="search-container">
-            <SearchFormContainer />
+            <SearchFormContainer searchTerm={this.state.searchTerm}/>
           </div>
           <ul className="restaurant-list">
             {this.indexEl()}

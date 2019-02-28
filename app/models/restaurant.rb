@@ -26,10 +26,10 @@ class Restaurant < ApplicationRecord
 
   def self.find_by_keyword(keyword)
     Restaurant.where("lower(city) like ?", "%#{keyword.downcase}%")
-              .or(Restaurant.where("lower(name) like ?", "#{keyword.downcase}%"))
-              .or(Restaurant.where("lower(cuisine) like ?", "#{keyword.downcase}%"))
-              .or(Restaurant.where("lower(address) like ?", "#{keyword.downcase}%"))
-              .or(Restaurant.where("lower(state) like ?", "#{keyword.downcase}%"))
+              .or(Restaurant.where("lower(name) like ?", "%#{keyword.downcase}%"))
+              .or(Restaurant.where("lower(cuisine) like ?", "%#{keyword.downcase}%"))
+              .or(Restaurant.where("lower(address) like ?", "%#{keyword.downcase}%"))
+              .or(Restaurant.where("lower(state) like ?", "%#{keyword.downcase}%"))
   end
 
   def rating_arr

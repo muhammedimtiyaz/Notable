@@ -466,7 +466,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "French",
   description: "Bryant and Kim Ng partnered with Rustic Canyon’s Josh Loeb and Zoe Nathan for a powerhouse restaurant in Santa Monica. The vibe is wonderful: Expansive and vibrant without being too formal, it's the kind of place one can drop in for a cocktail and raw seafood at the bar, or a long sit-down dinner with friends. The plates recall Bryant’s upbringing, incorporating flavors of Singapore and Vietnam with a heavy dose of French technique.",
-  logo: "https://cdn.vox-cdn.com/thumbor/xW39BgTwGpvZQEXvSoXymEQP-gI=/0x0:2000x1331/1020x765/filters:focal(840x506:1160x826)/cdn.vox-cdn.com/uploads/chorus_image/image/56977465/2015-06-18-cassia-005.0.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/photos/medium/24097866.jpg"
 )
 
 Restaurant.create!(
@@ -546,7 +546,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "Contemporary American",
   description: "David LeFevre's enduring Manhattan Beach restaurant remains packed every night of the week thanks to its crowd-pleasing menu of market-driven fare with a chef's touch. The dark environs make for a perfect date spot just steps from the ocean, while crave-worthy fare like the cheddar bacon biscuits, green curry mussels, and braised lamb belly convince diners to become regulars after just one bite.",
-  logo: "https://cdn.vox-cdn.com/thumbor/1Zk5kwZex0nyaf8mf2hPwLv_wvg=/0x0:1000x667/1020x765/filters:focal(420x254:580x414)/cdn.vox-cdn.com/uploads/chorus_image/image/56977471/011_11_12_STONE_COLD_STUNNERS_MB_POST-38.0.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/profiles/legacy/60682.jpg"
 )
 
 Restaurant.create!(
@@ -610,7 +610,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "Italian",
   description: "Jon Shook and Vinny Dotolo wanted to put their mark on Fairfax, and while their still-excellent restaurant Animal occupies the western part of the block, this shiny Italian-American-inspired place is all the rage. With composed pastas and salads and some fine pizzas, it's the kind of comfort food that everyone can get behind.",
-  logo: "https://cdn.vox-cdn.com/thumbor/C3Q3DtzUYEvezRT6rKgAqIdwLDs=/0x0:2000x1331/1020x765/filters:focal(840x506:1160x826)/cdn.vox-cdn.com/uploads/chorus_image/image/56977485/2015-04-18-JonVinnys-005.0.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/profiles/legacy/37450.jpg"
 )
 
 Restaurant.create!(
@@ -674,7 +674,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "Contemporary American",
   description: "Grace, the highly anticipated restaurant from acclaimed chef Curtis Duffy, opened late 2012 in the Randolph Street area, just west of downtown Chicago. The subtle elegance of the dining room provides a comfortably luxurious setting in which to enjoy Chef Duffy's Progressive American cuisine, offered in a tasting menu format. In addition to the dining room, a private dining space to accommodate up to 12 is available, as well as a lounge for a pre- or post-dinner drink.",
-  logo: "https://cdn.vox-cdn.com/thumbor/I6HvQhHnjQC3PFCXZreeEp4ItWs=/0x0:2048x1365/1020x765/filters:focal(861x520:1187x846)/cdn.vox-cdn.com/uploads/chorus_image/image/57240075/22548883_1578412772219977_7220683683718921224_o.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/profiles/legacy/173581.jpg"
 )
 
 Restaurant.create!(
@@ -725,7 +725,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "Contemporary American",
   description: "Located on the 16th floor of Trump International Hotel & Tower, the signature Two-Michelin star rated Sixteen offers panoramic views of the Chicago skyline. Chef Dostal’s innovative dinner menu showcases the highest quality ingredients and shows the guest a new approach to modern cuisine.",
-  logo: "https://cdn.vox-cdn.com/thumbor/RoNPzkaImsAoXnynTDgPX2tdLsY=/0x0:1080x1080/1020x765/filters:focal(454x454:626x626)/cdn.vox-cdn.com/uploads/chorus_image/image/57240081/22181225_10155863229153413_7017392436904691460_o.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/profiles/legacy/20434.jpg"
 )
 
 Restaurant.create!(
@@ -931,7 +931,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "Seafood",
   description: "Michelin Guide director Michael Ellis billed Komi founder Johnny Monis as “a great inspiration” to other local chefs. “We’re going to continue to follow him very closely,” he says of the driving force behind this tasting menu-centric Greek restaurant.",
-  logo: "https://cdn.vox-cdn.com/thumbor/czVc-89LvR3vosaQNCWk7LKNbZg=/0x0:960x720/1020x765/filters:focal(356x431:508x583)/cdn.vox-cdn.com/uploads/chorus_image/image/57189279/Komi_DC_fish.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/profiles/legacy/193009.jpg"
 )
 
 Restaurant.create!(
@@ -1011,7 +1011,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "Japanese",
   description: "Sushi legend Shiro Kashiba continues to spread his influence throughout Seattle, as former students perfect their own styles and, as some have suggested of Wataru’s Kotaro Kumita, even surpass their former master. Ordering omakase at the chef’s counter is the best way to experience this intimate restaurant’s Edomae-style sushi, which is subtly manipulated — cured, marinated, smoked, sliced — to unlock new flavors in familiar seasonal items like geoduck and scallops.",
-  logo: "https://cdn.vox-cdn.com/thumbor/Vi_lb84bai5u4J1CtGBSCeHMYuQ=/0x0:1000x746/1020x765/filters:focal(420x293:580x453)/cdn.vox-cdn.com/uploads/chorus_image/image/59339269/eatersea0117_wataru_yelp_kathleen_c.0.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/profiles/legacy/145852.jpg"
 )
 
 Restaurant.create!(
@@ -1059,7 +1059,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "Italian",
   description: "This trattoria shines with memorable pastas and Piedmont-influenced fare — the nest of tajarin with butter and sage sauce is a true Seattle icon. And adjoining bar Artusi is a perfect place for a nightcap.",
-  logo: "https://cdn.vox-cdn.com/thumbor/K-cjapxsTA4qsyFO3L9_dEAhLI4=/0x0:2000x1333/1020x765/filters:focal(840x507:1160x827)/cdn.vox-cdn.com/uploads/chorus_image/image/59339299/eatersea0417_spinasse_tajarin_official.0.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/profiles/legacy/5207.jpg"
 )
 
 Restaurant.create!(
@@ -1075,7 +1075,7 @@ Restaurant.create!(
   close_time: "22:00:00",
   cuisine: "French",
   description: "This traditional French bistro boasts both a legendary roast chicken that takes up to an hour to prepare and an informal charm that makes diners want to linger all afternoon with some charcuterie and cheese. And the soups here, from classic French onion or creamy mushroom to specials like celery root puree with walnut oil, will fend off any fall chills.",
-  logo: "https://cdn.vox-cdn.com/thumbor/BLxJAqqHQsif4GrG2Y16gwBo5Oc=/0x0:2592x1728/1020x765/filters:focal(1089x657:1503x1071)/cdn.vox-cdn.com/uploads/chorus_image/image/59339311/SOUPLePichet.0.0.jpg"
+  logo: "https://resizer.otstatic.com/v2/profiles/legacy/2648.jpg"
 )
 
 Restaurant.create!(
@@ -1094,8 +1094,11 @@ Restaurant.create!(
   logo: "https://cdn.vox-cdn.com/thumbor/63tNjXVGI8xRp_d-RzJM60BisWE=/0x0:4755x3170/1020x765/filters:focal(1998x1205:2758x1965)/cdn.vox-cdn.com/uploads/chorus_image/image/59339317/pesto2_ilcorvo16.0.0.0.0.jpg"
 )
 
+cuisine_arr = ["American", "Italian", "Seafood", "Japanese", "Chinese", "Tapas", "Asian", "Mediterranean", "Lebanese", "Pan-Asian", "Steakhouse", "Contemporary", ""]
 
-12.times do
+logos = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIjOcaUeEeYFUpaevwNTDiaDiCm3r-Tje16ui7exYi_aSQIp5_kA", "https://cdn.vox-cdn.com/thumbor/63tNjXVGI8xRp_d-RzJM60BisWE=/0x0:4755x3170/1020x765/filters:focal(1998x1205:2758x1965)/cdn.vox-cdn.com/uploads/chorus_image/image/59339317/pesto2_ilcorvo16.0.0.0.0.jpg", "https://resizer.otstatic.com/v2/profiles/legacy/2648.jpg", "https://resizer.otstatic.com/v2/profiles/legacy/5207.jpg", "https://cdn.vox-cdn.com/thumbor/3dUogm1IX_9jv6Ok64HjI8olwmM=/0x0:2000x1333/1020x765/filters:focal(840x507:1160x827)/cdn.vox-cdn.com/uploads/chorus_image/image/59339285/joule_shortrib.0.0.0.0.0.jpg", "https://cdn.vox-cdn.com/thumbor/0xPVJiARdd6pdAxf1KoX3hV3BIM=/0x0:1200x800/1020x765/filters:focal(504x304:696x496)/cdn.vox-cdn.com/uploads/chorus_image/image/59339273/eatersea0716_harvest_beat_fb.0.0.jpg", "https://cdn.vox-cdn.com/thumbor/0xPVJiARdd6pdAxf1KoX3hV3BIM=/0x0:1200x800/1020x765/filters:focal(504x304:696x496)/cdn.vox-cdn.com/uploads/chorus_image/image/59339273/eatersea0716_harvest_beat_fb.0.0.jpg", "https://resizer.otstatic.com/v2/profiles/legacy/145852.jpg", "https://cdn.vox-cdn.com/thumbor/ZeSC0WZWpM_Ol3KePMG-jTg8V9Y=/0x0:1627x1133/1020x765/filters:focal(684x437:944x697)/cdn.vox-cdn.com/uploads/chorus_image/image/59339257/11705521_995468873828997_3370975274006679221_o.0.0.jpg", "https://cdn.vox-cdn.com/thumbor/I00EXrvf8gZFta24l5Xoii35hSg=/0x0:899x703/1020x765/filters:focal(186x184:328x326)/cdn.vox-cdn.com/uploads/chorus_image/image/57189291/Tail_Up_Goat_DC_food.0.jpg", "https://cdn.vox-cdn.com/thumbor/XJnm5-Oq8MxzrzxXd3X1XKKTfBA=/0x0:960x640/1020x765/filters:focal(393x247:545x399)/cdn.vox-cdn.com/uploads/chorus_image/image/57189265/Minibar_DC_food.0.jpg", "https://cdn.vox-cdn.com/thumbor/d2B5Vk-LWACEo2xTvshrZ-wJ5ro=/0x0:571x427/1020x765/filters:focal(241x169:331x259)/cdn.vox-cdn.com/uploads/chorus_image/image/56977479/lukshon.0.0.jpg"]
+
+40.times do
   Restaurant.create!(
     owner_id:  (1..10).to_a.sample,
     name: Faker::Food.dish,
@@ -1107,9 +1110,9 @@ Restaurant.create!(
     phone_number: Faker::PhoneNumber.phone_number.delete("(").delete(")").slice(0,12),
     open_time: "12:00:00",
     close_time: "20:00:00",
-    cuisine: Faker::Address.country,
+    cuisine: cuisine_arr.sample,
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    logo: "https://cdn.vox-cdn.com/thumbor/HPcBiIqtn_Zn1uiVjWX_DQVTs_4=/0x0:742x742/1020x765/filters:focal(353x350:471x468)/cdn.vox-cdn.com/uploads/chorus_image/image/57189273/Dabney_DC_quail.0.jpg"
+    logo: logos.sample
   )
 end
 

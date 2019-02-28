@@ -121,7 +121,7 @@
   padding: 10px 0;
 }
 
-.favorite-btn {
+.favourite-btn {
   text-align: center;
   padding: 16px 0;
   border: 1px solid #d8d9db;
@@ -131,19 +131,19 @@
   top: 270px;
 }
 
-.favorite-btn i {
+.favourite-btn i {
   padding-right: 10px;
 }
 
-.favorite-btn:hover {
+.favourite-btn:hover {
   border: 2px solid #da3743;
 }
 
 
-.favorite-active {
+.favourite-active {
   border: 2px solid #da3743;
 }
 
-.favorite-active i {
+.favourite-active i {
   color: #da3743;
 }

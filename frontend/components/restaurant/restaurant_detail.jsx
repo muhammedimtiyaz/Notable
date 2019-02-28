@@ -83,7 +83,7 @@ class RestaurantDetail extends React.Component {
           onClick={this.createFavourite(restaurant.id)}
           className="favourite-btn">
           <i className="far fa-bookmark"></i>
-          Save this restaurant
+          &nbsp;&nbsp;Save this restaurant
         </div>
       );
     }
@@ -93,15 +93,15 @@ class RestaurantDetail extends React.Component {
 
   deleteFavourite(id){
     return (e) => {
-     e.preventDefault();
-     this.props.deleteFavourite(id);
+      e.preventDefault();
+      this.props.deleteFavourite(id);
     };
   }
 
   createFavourite(){
     return (e) => {
-     e.preventDefault();
-     this.props.createFavourite(this.props.restaurant.id);
+      e.preventDefault();
+      this.props.createFavourite(this.props.restaurant.id);
     };
   }
 

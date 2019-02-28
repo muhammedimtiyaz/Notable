@@ -5,7 +5,8 @@ class SearchForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: ''
+      searchTerm: this.props.searchTerm,
+      placeholder: "Location, Restaurant, or Cuisine",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -23,11 +24,7 @@ class SearchForm extends React.Component {
     this.props.openModal("loading");
     this.props.searchRestaurants(this.state.searchTerm)
       .then(() => this.props.closeModal()
-      ).then(() =>
-        this.setState({
-          searchTerm: ''
-        })
-      ).then(() => this.props.history.push("/restaurants"));
+      ).then(() => this.props.history.push(`/restaurants?${this.state.searchTerm}`));
   }
 
 
@@ -49,11 +46,13 @@ class SearchForm extends React.Component {
         </h3>
         <div className="search-form">
           <input type="text"
+            // defaultValue="Location, Restaurant, or Cuisine"
             className="search-input"
             id="search-content"
-            value={this.state.searchTerm}
+            ref={this.state.searchTerm}
             onChange={this.update('searchTerm')}
-            placeholder="Location, Restaurant, or Cuisine"/>
+            placeholder={this.state.searchTerm ? this.state.searchTerm : this.state.placeholder}
+            />
 
           <input className="submit-button"
             onClick={this.handleSubmit}
