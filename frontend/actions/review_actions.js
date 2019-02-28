@@ -16,10 +16,12 @@ export const receiveReview = review => ({
   review
 });
 
-export const receiveReviewErrors = errors => ({
-  type: RECEIVE_REVIEW_ERRORS,
-  errors
-});
+export const receiveReviewErrors = errors => {
+  return {
+    type: RECEIVE_REVIEW_ERRORS,
+    errors
+  }
+};
 
 export const removeReview = id => ({
   type: REMOVE_REVIEW,

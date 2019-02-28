@@ -30,11 +30,14 @@ class ReservationForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    if (this.props.currentUser) {
-      this.setState({user_id: this.props.currentUser.id});
-    }
+    let fetchInfo = {
+      restaurant_id: this.state.restaurant_id,
+      seats: this.state.seats,
+      date: this.state.date,
+      time: this.state.time
+    };
 
-    this.props.createReservation(this.state).then(() => {
+    this.props.createReservation(fetchInfo).then(() => {
       this.props.removeErrors();
       this.props.history.push(`/users/${this.props.currentUser.id}`);
     });

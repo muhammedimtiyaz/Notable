@@ -3,7 +3,7 @@ class Api::ReservationsController < ApplicationController
     user = User.find_by(id: params[:userId])
 
     if user
-      @reservations = user.reservations.order(:date)
+      @reservations = user.reservations.order(date: :asc)
       render :index
     else
       render json: ["User not found"], status: 404
@@ -12,6 +12,8 @@ class Api::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.user_id = current_user.id
+    @reservation.restaurant_id = params[:reservation][:restaurant_id]
     if @reservation.save
       render "/api/reservations/show"
     else
@@ -38,6 +40,6 @@ class Api::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:user_id, :restaurant_id, :time, :date, :seats)
+    params.require(:reservation).permit(:time, :date, :seats)
   end
 end

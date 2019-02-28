@@ -1,6 +1,6 @@
 class Api::FavouritesController < ApplicationController
   def index
-    user = User.find(id: params[:userId])
+    user = User.find(params[:userId])
       if user
         @favourites = user.favourites
       else

@@ -64,11 +64,13 @@ class Profile extends React.Component {
   upcomingReservations() {
     const upcoming = [];
     const today = new Date().toJSON();
-
     const allRes = Object.values(this.props.reservations);
-    allRes.forEach((reservation) => {
+    const sorted = allRes.sort((a,b) => { return new Date(a.date) - new Date(b.date); });
+    debugger
+    sorted.forEach((reservation) => {
+      debugger
       if(Date.parse(today.slice(0, 10)) <= Date.parse(reservation.date)) {
-        upcoming.push(reservation);
+        upcoming.unshift(reservation);
       }
     });
 
@@ -124,11 +126,11 @@ class Profile extends React.Component {
   passedReservations() {
     const past = [];
     const today = new Date().toJSON();
-
     const allRes = Object.values(this.props.reservations);
-    allRes.forEach((reservation) => {
+    const sorted = allRes.sort((a,b) => { return new Date(a.date) - new Date(b.date); });
+    sorted.forEach((reservation) => {
       if(Date.parse(today.slice(0, 10)) > Date.parse(reservation.date)) {
-        past.push(reservation);
+        past.unshift(reservation);
       }
     });
 

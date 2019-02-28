@@ -14,24 +14,14 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.find(review_params)
+    @review = Review.new(review_params)
+    @review.user_id = current_user.id
+    @review.restaurant_id = params[:review][:restaurant_id]
     if @review.save
       render :show
     else
       render json: @review.errors.full_messages, status: 422
     end
-    # relevant_reservations = current_user.reservations.where(restaurant_id: params[:restaurantId])
-    # current_reservation = relevant_reservations.order(created_at: :desc).first
-    # if Time.now > current_reservation.time
-    #   @review = current_user.reviews.new(review_params)
-    #   if @review.save
-    #     render :show
-    #   else
-    #     render json: @review.errors.full_messages, status: 422
-    #   end
-    # else
-    #   render json: ['Can\'t post review yet']
-    # end
   end
 
   def update
@@ -71,6 +61,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:user_id, :restaurant_id, :rating, :comment)
+    params.require(:review).permit(:rating, :comment)
   end
 end
