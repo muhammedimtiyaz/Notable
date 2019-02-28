@@ -5,7 +5,7 @@ class SearchForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: this.props.searchTerm,
+      searchTerm: "",
       placeholder: "Location, Restaurant, or Cuisine",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -49,7 +49,7 @@ class SearchForm extends React.Component {
             // defaultValue="Location, Restaurant, or Cuisine"
             className="search-input"
             id="search-content"
-            ref={this.state.searchTerm}
+            value={this.state.searchTerm}
             onChange={this.update('searchTerm')}
             placeholder={this.state.searchTerm ? this.state.searchTerm : this.state.placeholder}
             />

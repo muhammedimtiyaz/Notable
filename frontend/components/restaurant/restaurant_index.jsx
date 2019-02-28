@@ -7,8 +7,8 @@ class RestaurantIndex extends React.Component {
     // debugger
     super(props);
     this.state = {
-      searchTerm: this.props.location.search.substr(1),
-    }
+      searchTerm: this.props.location.search ? this.props.location.search.substr(1) : "",
+    };
     this.indexEl = this.indexEl.bind(this);
   }
 

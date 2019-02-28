@@ -30,11 +30,7 @@ class FeaturedAreas extends React.Component {
       }, () => (
         that.props.searchRestaurants(that.state.searchTerm)
         .then(() => that.props.closeModal()
-        ).then(() =>
-          that.setState({
-            searchTerm: ''
-          })
-        ).then(() => that.props.history.push("/restaurants"))
+        ).then(() => that.props.history.push(`/restaurants?${this.state.searchTerm}`))
       ));
     }, 500)
 
