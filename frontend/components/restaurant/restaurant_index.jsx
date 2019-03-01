@@ -4,7 +4,6 @@ import RestaurantIndexItem from "./restaurant_index_items";
 
 class RestaurantIndex extends React.Component {
   constructor(props) {
-    // debugger
     super(props);
     this.state = {
       searchTerm: this.props.location.search ? this.props.location.search.substr(1) : "",
