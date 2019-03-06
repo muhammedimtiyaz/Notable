@@ -7,7 +7,7 @@ class FeaturedAreas extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: ''
+      searchTerm: this.props.location.search ? this.props.location.search.substr(1) : "",
     };
     this.handleClick = this.handleClick.bind(this);
   }
