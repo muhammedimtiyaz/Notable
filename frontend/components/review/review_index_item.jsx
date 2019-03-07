@@ -43,7 +43,7 @@ class ReviewIndexItem extends React.Component {
     if (!this.props.currentUser) {
       return (
         <li className="review-li">
-          <span className="review-name">{review.user.first_name}</span>
+          <span className="review-name">{review.user.firstname}</span>
           <span className="rate-icon">{this.getRate()}</span>
           <span>
             <i className="fa fa-share" />
@@ -58,7 +58,7 @@ class ReviewIndexItem extends React.Component {
           <span className="review-name">
             {this.props.currentUser.id === review.user.id
               ? "You"
-              : review.user.first_name}
+              : review.user.firstname}
           </span>
           <span className="rate-icon">{this.getRate()}</span>
           <span>

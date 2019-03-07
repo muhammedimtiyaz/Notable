@@ -207,7 +207,7 @@ class RestaurantDetail extends React.Component {
                 ref={ el => { this.reviewsSection = el;} }
                 className='restaurant-reviews'
                 name='reviews'>
-                  <h5>What {this.props.restaurant.rating_arr.length} People Are Saying</h5>
+                  <h5>What People Are Saying</h5>
                   <Route path={'/restaurants/:restaurantId'}
                     component={ReviewIndexContainer} />
               </div>

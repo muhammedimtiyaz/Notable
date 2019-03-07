@@ -65,7 +65,7 @@ class Profile extends React.Component {
     const upcoming = [];
     const today = new Date().toJSON();
     const allRes = Object.values(this.props.reservations);
-    const sorted = allRes.sort((a,b) => { return new Date(a.date) - new Date(b.date); });
+    const sorted = allRes.sort((a,b) => { return new Date(b.date) - new Date(a.date); });
     sorted.forEach((reservation) => {
       if(Date.parse(today.slice(0, 10)) <= Date.parse(reservation.date)) {
         upcoming.unshift(reservation);

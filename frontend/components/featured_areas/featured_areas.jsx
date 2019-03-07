@@ -47,14 +47,14 @@ class FeaturedAreas extends React.Component {
             id="new_york"
             onClick={this.handleClick}>
             New York
-              <h4>31,793 restaurants</h4>
+              {/* <h4>31,793 restaurants</h4> */}
           </div>
           <div
             className="city-col los_angeles"
             id="los_angeles"
             onClick={this.handleClick}>
             Los Angeles
-              <h4>10,705 restaurants</h4>
+              {/* <h4>10,705 restaurants</h4> */}
           </div>
 
           <div
@@ -62,28 +62,28 @@ class FeaturedAreas extends React.Component {
             id="chicago"
             onClick={this.handleClick}>
             Chicago
-              <h4>10,730 restaurants</h4>
+              {/* <h4>10,730 restaurants</h4> */}
           </div>
           <div
             className="city-col san_francisco"
             id="san_francisco"
             onClick={this.handleClick}>
             San Francisco
-              <h4>8,743 restaurants</h4>
+              {/* <h4>8,743 restaurants</h4> */}
           </div>
           <div
             className="city-col washington"
             id="washington"
             onClick={this.handleClick}>
             Washington DC
-              <h4>4,733 restaurants</h4>
+              {/* <h4>4,733 restaurants</h4> */}
           </div>
           <div
             className="city-col seattle"
             id="seattle"
             onClick={this.handleClick}>
             Seattle
-              <h4>6,299 restaurants</h4>
+              {/* <h4>6,299 restaurants</h4> */}
           </div>
         </div>
         <div className="featured-locations-container">
