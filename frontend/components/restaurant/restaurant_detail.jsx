@@ -141,7 +141,7 @@ class RestaurantDetail extends React.Component {
     for (var idx = 0; idx < aveRating; idx++) {
       rateArr.push (
         <img
-          key={idx}
+          key={(String(Math.random())).substring(2, 7)}
           src="https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523511580/rating_icon_full.png"
           />
       );
@@ -150,7 +150,7 @@ class RestaurantDetail extends React.Component {
     for (var idx = aveRating; idx < 5 ; idx++) {
       rateArr.push (
         <img
-          key={idx}
+          key={(String(Math.random())).substring(2, 7)}
           src="https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523511580/rating_icon_empty.png"
           />
       );

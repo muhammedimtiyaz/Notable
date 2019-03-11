@@ -25,7 +25,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find(params[:id])
+    @review = Review.find(params[:review][:id])
     if @review.update_attributes(review_params)
       render :show
     else
@@ -43,7 +43,7 @@ class Api::ReviewsController < ApplicationController
     review = Review.find(params[:id])
     if review
       review.destroy
-      render json: review
+      render json: {}
     else
       render json: ["Review doesn't exist"], status: 404
     end

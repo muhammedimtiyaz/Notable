@@ -25,7 +25,7 @@ export const receiveReviewErrors = errors => {
 
 export const removeReview = id => ({
   type: REMOVE_REVIEW,
-  reviewId: id,
+  id
 });
 
 export const updateReview = updatedReview => ({
@@ -50,5 +50,5 @@ export const editReview = review => dispatch => {
 };
 
 export const deleteReview = (id) => dispatch => {
-  return ReviewApiUtil.deleteReview(id).then(response => dispatch(removeReview(response)), err => dispatch(receiveReviewErrors(err.responseJSON)));
+  return ReviewApiUtil.deleteReview(id).then(response => dispatch(removeReview(id)), err => dispatch(receiveReviewErrors(err.responseJSON)));
 };

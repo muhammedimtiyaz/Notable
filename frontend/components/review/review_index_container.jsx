@@ -4,7 +4,7 @@ import ReviewIndex from "./review_index";
 import { requestRestaurantReviews, deleteReview } from "../../actions/review_actions";
 
 const msp = (state, ownProps) => ({
-  currentUser: state.session.currenUser,
+  currentUser: state.session.currentUser,
   reviews: state.entities.reviews,
   restaurantId: ownProps.match.params.restaurantId,
   restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],

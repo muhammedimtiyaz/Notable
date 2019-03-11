@@ -14,7 +14,7 @@ It features restaurants that users can view, book and review. Users can search f
 
 ## Description
 ### Search
-NoTable makes it easy for users to search Michelin star restaurants to find available reservations. One can search by location, restaurant name, or cuisines.
+NoTable makes it easy for users to search restaurants to find available reservations. One can search by location, restaurant name, or cuisines.
 ![index](https://res.cloudinary.com/chengzii/image/upload/v1523658252/starTable_search.jpg)
 
 

@@ -13,7 +13,7 @@ class ReviewIndexItem extends React.Component {
     for (var idx = 0; idx < rating; idx++) {
       rateArr.push(
         <img
-          key={idx}
+          key={(String(Math.random())).substring(2, 7)}
           src="https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523511580/rating_icon_full.png"
         />
       );
@@ -22,7 +22,7 @@ class ReviewIndexItem extends React.Component {
     for (var idx = rating; idx < 5; idx++) {
       rateArr.push(
         <img
-          key={idx}
+          key={(String(Math.random())).substring(2, 7)}
           src="https://res.cloudinary.com/chengzii/image/upload/c_scale,w_20/v1523511580/rating_icon_empty.png"
         />
       );
@@ -46,8 +46,11 @@ class ReviewIndexItem extends React.Component {
           <span className="review-name">{review.user.firstname}</span>
           <span className="rate-icon">{this.getRate()}</span>
           <span>
-            <i className="fa fa-share" />
             commented on {createdAt}
+          </span>
+            &nbsp;
+          <span>
+            <i className="fa fa-share" />
           </span>
           <p>{review.comment}</p>
         </li>
@@ -62,8 +65,9 @@ class ReviewIndexItem extends React.Component {
           </span>
           <span className="rate-icon">{this.getRate()}</span>
           <span>
-            <i className="fa fa-share" />
             commented on {createdAt}
+            &nbsp;
+            <i className="fa fa-share" />
             {this.props.currentUser.id === review.user.id ? (
               <button
                 type="button"
