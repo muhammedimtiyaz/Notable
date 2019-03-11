@@ -110,6 +110,7 @@ hr {
   width: 390px;
   align-items: center;
   margin-bottom: 10px;
+  cursor: pointer;
 } 
 
 .facebook-google-icon {

@@ -50,6 +50,7 @@ background-color: #da3743;
 border-color: #b8222d;
 color: #fff;
 padding: 0 10px;
+cursor: pointer;
 }
 
 .submit-button:hover{

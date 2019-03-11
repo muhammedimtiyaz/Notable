@@ -79,6 +79,7 @@
   border-radius: 24px;
   transition: background-color 300ms ease-out;
   margin: 16px auto;
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
