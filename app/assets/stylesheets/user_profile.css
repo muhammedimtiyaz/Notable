@@ -93,6 +93,7 @@
   position: absolute;
   right: 0;
   bottom: 20px;
+  cursor: pointer;
 }
 
 .reservation-delete-btn {
@@ -111,6 +112,7 @@
   position: absolute;
   right: 0;
   bottom: 20px;
+  cursor: pointer;
 }
 
 .no-reservation {

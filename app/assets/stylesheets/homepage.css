@@ -146,6 +146,7 @@
   color: #fff;
   width: 78px;
   margin: 0 8px 0 6px;
+  cursor: pointer;
 }
 
 .btn:focus{
@@ -216,6 +217,7 @@
 .footer-links a {
   text-decoration: none;
   color: #ccc;
+  cursor: pointer;
 }
 
 .footer-links p {
