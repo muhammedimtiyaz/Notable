@@ -5,7 +5,7 @@ class SearchForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: this.props.searchTerm,
+      searchTerm: this.props.searchTerm ? this.props.searchTerm : "",
       placeholder: "Location, Restaurant, or Cuisine",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
